@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMap, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/footer.css";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -27,10 +28,10 @@ function Footer() {
                 href="https://www.google.com/maps/search/S.B.+Complex,+hatigaon/@26.137904,91.785799,5424m/data=!3m1!1e3?hl=en&entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D"
                 target="_blank"className="address"
               >
-                SB Complex H.no-5 <br />
-                Brindavan Path Hatigaon Main Road <br />
-                Kamrup Guwahati <br />
-                Assam 781038
+                SB Complex, H.no-5 <br />
+                Brindavan Path, Hatigaon Main Road <br />
+                Kamrup, Guwahati <br />
+                Assam, 781038
               </a>
             </p>
           </div>
@@ -68,29 +69,29 @@ function Footer() {
             <h4 className="footer-subtitle">Explore</h4>
             <ul className="list-unstyled footer-links">
               <li>
-                <a href="/about" className="footer-link">
+                <Link to='/about' className="footer-link">
                   → About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/gallery" className="footer-link">
+                <Link to='/gallery' className="footer-link">
                   → Gallery
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/cluster/tea" className="footer-link">
+                <Link to='/cluster/tea' className="footer-link">
                   → Cluster
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/product" className="footer-link">
+                <Link to="/product" className="footer-link">
                   → Products
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/contact" className="footer-link">
+                <Link to='/contact' className="footer-link">
                   → Enquire
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

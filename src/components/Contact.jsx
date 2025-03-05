@@ -83,10 +83,10 @@ function Contact() {
               href="https://www.google.com/maps/search/S.B.+Complex,+hatigaon/@26.137904,91.785799,5424m/data=!3m1!1e3?hl=en&entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D"
               target="_blank"
             >
-              SB Complex H.no-5 <br />
-              Brindavan Path Hatigaon Main Road <br />
-              Kamrup Guwahati <br />
-              Assam 781038
+              SB Complex, H.no-5 <br />
+              Brindavan Path, Hatigaon Main Road <br />
+              Kamrup, Guwahati <br />
+              Assam, 781038
             </a>
           </address>
         </div>
