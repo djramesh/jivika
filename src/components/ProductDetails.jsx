@@ -76,7 +76,7 @@ const ProductDetails = () => {
         </div>
       </div>
 
-      <div className="product-images-bottom d-flex flex-md-row align-items-center justify-content-center mt-3">
+      <div className="product-images-bottom d-flex flex-md-row align-items-center justify-content-center">
         <h1 className="text-center">Product Images</h1>
         {(product.productImages || []).slice(0, 5).map((image, index) => (
           <img
