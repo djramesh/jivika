@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isClusterOpen, setIsClusterOpen] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
     <nav className="navbar navbar-expand-lg fixed-top navbar-glass">
@@ -17,12 +18,13 @@ const Navbar = () => {
         </Link>
 
         <button
-          className="navbar-toggler custom-toggler"
+          className={`navbar-toggler custom-toggler ${isNavOpen ? 'collapsed' : ''}`}
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarContent"
+          onClick={() => setIsNavOpen(!isNavOpen)}
         >
-          <span className="navbar-toggler-icon"></span>
+          <span className={`navbar-toggler-icon ${isNavOpen ? 'cross' : ''}`}></span>
         </button>
 
         <div className="collapse navbar-collapse" id="navbarContent">
@@ -98,7 +100,7 @@ const Navbar = () => {
 
             <li className="nav-item">
               <Link to="/product" className="nav-link hover-underline">
-                Product
+                Products
               </Link>
             </li>
             <li className="nav-item">

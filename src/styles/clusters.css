@@ -105,6 +105,18 @@
     margin: 0 auto;
   }
 
+  .cluster-card::after{
+    top: -60px;
+    left: -70px;
+    background-image: var(--hover-img);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;
+    width: 200px;
+    height: 200px;
+  }
+
   .cluster-icon {
     font-size: 1rem;
     padding: 0.5rem;

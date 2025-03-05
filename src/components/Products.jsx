@@ -175,7 +175,7 @@ const Products = () => {
   }, []);
 
   return (
-    <div id="products mt-3">
+    <div id="products">
       <div className="products-section">
         <div className="product-bg">
           <img
