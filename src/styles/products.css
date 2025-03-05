@@ -1,0 +1,139 @@
+.products-section {
+  width: calc(100% - 4rem);
+  height: 25vh;
+  position: relative;
+  overflow: hidden;
+  background: #000;
+  border-radius: 20px;
+  margin: 0 2rem;
+}
+
+.product-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
+}
+
+.product-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.product-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+}
+
+.product-title {
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -2px;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-bottom: 0;
+}
+
+.product-grid {
+  /* width: calc(100% - 4rem); */
+  display: grid;
+  width: 80%;
+  margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.product-card {
+  width: 340px;
+  height: 480px;
+  background: #fff;
+  border-radius: 23px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: visible;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.product-content img {
+  margin-bottom: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.product-image {
+  margin-top: 18px;
+  width: 90%;
+  height: 45%;
+  object-fit: cover;
+  border-radius: 23px;
+}
+
+.product-content {
+  padding: 1rem;
+}
+
+.product-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.product-description {
+  font-size: 1rem;
+  color: #333;
+  /* margin-top: 1rem; */
+}
+
+.product-card:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.order-btn {
+  width: 50%;
+  background: linear-gradient(35deg, #fffd6b, #63cd4e);
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+}
+
+@media (max-width: 768px) {
+  .products-section {
+    height: 12vh;
+  }
+  .product-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}

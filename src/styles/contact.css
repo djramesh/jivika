@@ -1,0 +1,82 @@
+.span-contact{
+  text-decoration: underline; 
+  text-decoration-color: yellow; 
+  text-decoration-thickness: 2px
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.location {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  /* text-align: center; */
+  padding-top: 60px;
+  color: #333;
+  padding-bottom: 60px;
+}
+
+.location h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.location h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.map-container {
+  margin-top: 30px;
+  width: 30%;
+}
+
+.map-container iframe {
+  border: none;
+  border-radius: 15px;
+}
+
+address {
+  margin-top: 10px;
+  font-style: normal;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.icon {
+  margin-right: 8px;
+  color: #aaaaaa;
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  .contact-details {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap: -10px; */
+    margin-left: 50px;
+    margin-top: -10px;
+  }
+  .location {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .map-container {
+    width: 80%;
+  }
+  .contact-img {
+    width: 100%;
+  }
+}
