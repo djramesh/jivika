@@ -11,13 +11,13 @@ const ProductDetails = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [isOrderPopupVisible, setIsOrderPopupVisible] = useState(false);
 
-  const handleOrderClick=()=>{
+  const handleOrderClick = () => {
     setIsOrderPopupVisible(true);
   };
 
-  const closeOrderPopup =()=>{
+  const closeOrderPopup = () => {
     setIsOrderPopupVisible(false);
-  }
+  };
 
   if (!product) {
     return <div>Product not found</div>;
@@ -58,7 +58,9 @@ const ProductDetails = () => {
               style={{ borderRadius: "20px", width: "300px", height: "300px" }}
               alt={product.name}
             />
-            <button className="order-btn mt-5" onClick={handleOrderClick}>Order now</button>
+            <button className="order-btn mt-5" onClick={handleOrderClick}>
+              Order now
+            </button>
           </div>
           <div className="product-specs text-center text-md-right">
             <h3>Specifications</h3>
@@ -73,25 +75,25 @@ const ProductDetails = () => {
           </div>
         </div>
       </div>
-      <h1 className="text-center">Product Images</h1>
 
-        <div className="product-images-bottom d-flex flex-md-row align-items-center justify-content-center mt-4 ">
-          {(product.productImages || []).slice(0, 5).map((image, index) => (
-            <img
-              key={index}
-              src={image}
-              style={{
-                borderRadius: "20px",
-                width: "300px",
-                height: "300px",
-                cursor: "pointer",
-                margin: "0 5px",
-              }}
-              alt={`Product image ${index + 1}`}
-              onClick={() => handleImageClick(image)}
-            />
-          ))}
-        </div>
+      <div className="product-images-bottom d-flex flex-md-row align-items-center justify-content-center mt-3">
+        <h1 className="text-center">Product Images</h1>
+        {(product.productImages || []).slice(0, 5).map((image, index) => (
+          <img
+            key={index}
+            src={image}
+            style={{
+              borderRadius: "20px",
+              width: "300px",
+              height: "300px",
+              cursor: "pointer",
+              margin: "0 5px",
+            }}
+            alt={`Product image ${index + 1}`}
+            onClick={() => handleImageClick(image)}
+          />
+        ))}
+      </div>
       {/* {isPopupOpen && (
         <div className="image-popup">
           <div className="popup-content">
@@ -105,14 +107,36 @@ const ProductDetails = () => {
       {isOrderPopupVisible && (
         <div className="order-popup">
           <div className="order-popup-content">
-            <button className="close-order-btn" onClick={closeOrderPopup}>&times;</button>
+            <button className="close-order-btn" onClick={closeOrderPopup}>
+              &times;
+            </button>
             <div className="order-popup-details d-flex flex-md-row flex-column align-items-center justify-content-center">
               <div>
                 <h2>Contact for orders</h2>
-                <p>Email : <a href="mailto:lochan.dutta@schoolnetindia.com" className="text-decoration-none"><span className="span-contact"> lochan.dutta@schoolnetindia.com </span></a> <br /> Phone :<a href="tel:+918133991098" className="text-decoration-none"><span className="span-contact">+91 8133991098 </span></a></p>
+                <p>
+                  Email :{" "}
+                  <a
+                    href="mailto:lochan.dutta@schoolnetindia.com"
+                    className="text-decoration-none"
+                  >
+                    <span className="span-contact">
+                      {" "}
+                      lochan.dutta@schoolnetindia.com{" "}
+                    </span>
+                  </a>{" "}
+                  <br /> Phone :
+                  <a href="tel:+918133991098" className="text-decoration-none">
+                    <span className="span-contact">+91 8133991098 </span>
+                  </a>
+                </p>
               </div>
               <div>
-                <img src="/delivery-boy.png" alt="delivery-boy" width="200px" height="200px" />
+                <img
+                  src="/delivery-boy.png"
+                  alt="delivery-boy"
+                  width="200px"
+                  height="200px"
+                />
               </div>
             </div>
           </div>
