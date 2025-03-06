@@ -45,7 +45,7 @@ const Clusters = () => {
       <div className="text-center">
         <h1 className="position-relative d-inline-block display-1">
           <img src="/tea-leaf.png" alt="Tea Leaf" className="position-absolute float-image" style={{ width: '62px', height: '52px', top: '-10px', left: '-40px' }} />
-          Clusters
+          <span className='clusters-heading'>Clusters</span>
           <img src="/spices-img.png" alt="Spices" className="position-absolute float-image" style={{ width: '82px', height: '82px', top: '-40px', right: '-40px' }} />
           <img src="/citrus.png" alt="Citrus" className="position-absolute float-image" style={{ width: '82px', height: '82px', top: '60px', left: '-40px' }} />
           <img src="/bamboo.png" alt="Bamboo" className="position-absolute float-image" style={{ width: '82px', height: '82px', top: '60px', right: '-30px' }} />

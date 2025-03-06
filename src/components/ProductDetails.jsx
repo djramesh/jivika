@@ -37,7 +37,7 @@ const ProductDetails = () => {
     <div>
       <div className="product-details d-flex flex-md-row align-items-center justify-content-center vh-100 z-10">
         <div
-          className="d-flex flex-column flex-md-row align-items-center justify-content-between"
+          className="product-details-section d-flex flex-column flex-md-row align-items-center justify-content-between"
           style={{
             background: product.bgColor,
             borderRadius: "20px",
@@ -75,9 +75,10 @@ const ProductDetails = () => {
           </div>
         </div>
       </div>
-
-      <div className="product-images-bottom d-flex flex-md-row align-items-center justify-content-center">
+      <div className="product-images-heading">
         <h1 className="text-center">Product Images</h1>
+      </div>
+      <div className="product-images-bottom d-flex flex-column flex-md-row align-items-center justify-content-center">
         {(product.productImages || []).slice(0, 5).map((image, index) => (
           <img
             key={index}

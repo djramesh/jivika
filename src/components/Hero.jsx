@@ -25,7 +25,7 @@ const Hero = () => {
               </h1>
               <div className="d-flex justify-content-center gap-4 mt-5">
                 <Link to="/contact" className="custom-btn btn-primary-gradient">
-                  <span>Enquire</span>
+                  <span>Contact</span>
                   <i className="bi bi-arrow-right ms-2"></i>
                 </Link>
                 <Link to="/about" className="custom-btn btn-glass">

@@ -90,7 +90,7 @@ function Footer() {
               </li>
               <li>
                 <Link to='/contact' className="footer-link">
-                  → Enquire
+                  → Contact
                 </Link>
               </li>
             </ul>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import '../styles/navbar.css'
 
 const Navbar = () => {
   const [isClusterOpen, setIsClusterOpen] = useState(false);
@@ -18,13 +19,13 @@ const Navbar = () => {
         </Link>
 
         <button
-          className={`navbar-toggler custom-toggler ${isNavOpen ? 'collapsed' : ''}`}
-          type="button"
+          className={`navbar-toggler custom-toggler ${isNavOpen ? 'active' : ''}`}
+          // type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarContent"
           onClick={() => setIsNavOpen(!isNavOpen)}
         >
-          <span className={`navbar-toggler-icon ${isNavOpen ? 'cross' : ''}`}></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
 
         <div className="collapse navbar-collapse" id="navbarContent">
@@ -62,17 +63,17 @@ const Navbar = () => {
                       alt=""
                       style={{ width: "18px", height: "18px" }}
                     />
-                    &nbsp; Tea
+                      Tea
                   </Link>
                 </li>
                 <li>
                   <Link to="/cluster/citrus" className="dropdown-item">
                     <img
-                      src="	https://www.webappfactory.co/jeevika/assets/images/icon/citrus.svg"
+                      src="https://www.webappfactory.co/jeevika/assets/images/icon/citrus.svg"
                       alt=""
                       style={{ width: "18px", height: "18px" }}
                     />
-                    &nbsp; Citrus
+                      Citrus
                   </Link>
                 </li>
                 <li>
@@ -82,17 +83,17 @@ const Navbar = () => {
                       alt=""
                       style={{ width: "18px", height: "18px" }}
                     />
-                    &nbsp; Spice
+                      Spice
                   </Link>
                 </li>
                 <li>
                   <Link to="/cluster/bamboo" className="dropdown-item">
                     <img
-                      src="	https://www.webappfactory.co/jeevika/assets/images/icon/bamboo.svg"
+                      src="https://www.webappfactory.co/jeevika/assets/images/icon/bamboo.svg"
                       alt=""
                       style={{ width: "18px", height: "18px" }}
                     />
-                    &nbsp; Bamboo
+                      Bamboo
                   </Link>
                 </li>
               </ul>
@@ -116,7 +117,10 @@ const Navbar = () => {
           </ul>
 
           <div className="d-none d-lg-flex align-items-center gap-4">
-            <a href="https://www.google.com/maps/search/S.B.+Complex,+hatigaon/@26.137904,91.785799,5424m/data=!3m1!1e3?hl=en&entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D" target="_blank" className="nav-icon-link">
+            <a href="https://www.google.com/maps/search/S.B.+Complex,+hatigaon/@26.137904,91.785799,5424m/data=!3m1!1e3?hl=en&entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D" 
+               target="_blank" 
+               className="nav-icon-link"
+            >
               <svg
                 width="24"
                 height="24"
