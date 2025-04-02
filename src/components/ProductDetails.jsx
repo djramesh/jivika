@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import "../styles/productDetails.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const ProductDetails = () => {
   const location = useLocation();
@@ -126,8 +124,8 @@ const ProductDetails = () => {
                     </span>
                   </a>{" "}
                   <br /> Phone :
-                  <a href="tel:+918133991098" className="text-decoration-none">
-                    <span className="span-contact">+91 8133991098 </span>
+                  <a href="tel:8822535423" className="text-decoration-none">
+                    <span className="span-contact">+91 8822535423 </span>
                   </a>
                 </p>
               </div>

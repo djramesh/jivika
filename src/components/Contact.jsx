@@ -35,11 +35,11 @@ function Contact() {
               </span>
             </p>
           </a>
-          <a href="tel:8133991098">
+          <a href="tel:8822535423">
             <p>
               <span className="span-contact">
                 <FontAwesomeIcon icon={faPhone} className="me-2" />
-                +91 8133991098
+                +91 8822535423
               </span>
             </p>
           </a>{" "}

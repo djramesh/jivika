@@ -28,7 +28,7 @@ const clusters = [
   },
   {
     name: 'Bamboo',
-    img: 'https://www.webappfactory.co/jeevika/assets/images/gallery/glry_img11.webp',
+    img: '/bamboo-2.jpeg',
     icon: 'https://www.webappfactory.co/jeevika/assets/images/icon/bamboo.svg',
     hoverImg: '/bamboo.png',
     description: 'Introduced Bambusa tulda and Bambusa Balcooa in 30 ha of land as its absorbed 35% more green house gases and can store harmful Co2 in its root system.',

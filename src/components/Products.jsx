@@ -8,7 +8,7 @@ const products = [
   {
     id: 1,
     name: "Ginger",
-    img: "https://www.webappfactory.co/jeevika/assets/images/products/prd_ginger.webp",
+    img: "/ginger_img.JPG",
     productImages: [
       "/ginger-product-img-1.JPG",
       "/ginger-product-img-2.JPG",
@@ -53,11 +53,11 @@ const products = [
   {
     id: 4,
     name: "Khasi Mandarin",
-    img: "https://www.webappfactory.co/jeevika/assets/images/products/prd_khasi_mandarin.webp",
+    img: "https://horticult.wordpress.com/wp-content/uploads/2016/07/me1bb99t_cc3a0nh_que1baa5t.jpg?w=1200",
     productImages: [
-      "https://www.webappfactory.co/jeevika/assets/images/products/prd_khasi_mandarin.webp",
-      "https://www.webappfactory.co/jeevika/assets/images/products/prd_khasi_mandarin.webp",
-      "https://www.webappfactory.co/jeevika/assets/images/products/prd_khasi_mandarin.webp",
+      "/khasi_mandarine.jpeg",
+      "/khasi_mandarine_1.jpeg",
+      "/khasi_mandarine_3.jpeg",
     ],
     productImg: "/khasi-mandarin.png",
     scientificName: "Citrus reticulata",
@@ -68,11 +68,11 @@ const products = [
 
   {
     id: 5,
-    name: "Bhut Jolokiya (King Chilli)",
-    img: "https://www.webappfactory.co/jeevika/assets/images/products/prd_nagachilli.webp",
+    name: "Bhoot Jolokiya (King Chilli)",
+    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Bhut-Jolokia-pc.jpg/1200px-Bhut-Jolokia-pc.jpg",
     productImages: [
-      "https://www.webappfactory.co/jeevika/assets/images/products/prd_nagachilli.webp",
-      "https://www.webappfactory.co/jeevika/assets/images/products/prd_nagachilli.webp",
+      "https://cdn.shopify.com/s/files/1/0581/8230/3937/files/Bhut_Jolokia_-_Scoville_Scale_and_Heat_Levels.webp?v=1706513996",
+      "https://5.imimg.com/data5/KP/WB/MY-74392315/assam-bhut-jolokia.jpg",
       "https://www.webappfactory.co/jeevika/assets/images/products/prd_nagachilli.webp",
     ],
     productImg: "/king-chilli.png",
@@ -103,10 +103,10 @@ const products = [
   {
     id: 7,
     name: "Tea",
-    img: "https://www.webappfactory.co/jeevika/assets/images/service/tea2.webp",
+    img: "/tea_2.jpeg",
     productImages: [
-      "https://www.webappfactory.co/jeevika/assets/images/service/tea2.webp",
-      "https://www.webappfactory.co/jeevika/assets/images/service/tea2.webp",
+      "/tea_image.JPG",
+      "/tea_1.jpeg",
       "https://www.webappfactory.co/jeevika/assets/images/service/tea2.webp",
     ],
     productImg: "/tea.png",
@@ -153,11 +153,11 @@ const products = [
   {
     id: 10,
     name: "Bamboo",
-    img: "https://www.webappfactory.co/jeevika/assets/images/gallery/glry_img11.webp",
+    img: "/bamboo-1.jpeg",
     productImages: [
-      "https://www.webappfactory.co/jeevika/assets/images/gallery/glry_img11.webp",
-      "https://www.webappfactory.co/jeevika/assets/images/gallery/glry_img11.webp",
-      "https://www.webappfactory.co/jeevika/assets/images/gallery/glry_img11.webp",
+      "/bamboo-2.jpeg",
+      "/bamboo-1.jpeg",
+      "/bamboo-3.jpeg",
     ],
     productImg: "/bamboo-product.png",
     icon: "https://www.webappfactory.co/jeevika/assets/images/icon/bamboo.svg",
