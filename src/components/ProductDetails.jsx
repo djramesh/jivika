@@ -47,7 +47,7 @@ const ProductDetails = () => {
         >
           <div className="product-description text-center mx-md-2">
             <h1>{product.name}</h1>
-            <p className="text-muted">{product.scientificName}</p>
+            <p className="text-muted font-italic">{product.scientificName}</p>
             <p className="letter-spacing-1">{product.description}</p>
           </div>
           <div className="product-images text-center mx-md-2">

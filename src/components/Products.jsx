@@ -52,7 +52,7 @@ const products = [
   },
   {
     id: 4,
-    name: "Khasi Mandarin",
+    name: "Mandarin",
     img: "https://horticult.wordpress.com/wp-content/uploads/2016/07/me1bb99t_cc3a0nh_que1baa5t.jpg?w=1200",
     productImages: [
       "/khasi_mandarine.jpeg",
