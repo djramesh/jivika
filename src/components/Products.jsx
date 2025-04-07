@@ -86,11 +86,11 @@ const products = [
   {
     id: 6,
     name: "Assam lemon",
-    img: "https://www.webappfactory.co/jeevika/assets/images/products/prd_assam_lemon.webp",
+    img: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRv9tPamPXOLXCmZ0tGdSlV2azU9GYbZz2weqmZxNjJL650ojbX8CVMRrjyQMKy_3EAKZU2_Z1fbZiXpy96Ctd18w",
     productImages: [
-      "https://www.webappfactory.co/jeevika/assets/images/products/prd_assam_lemon.webp",
-      "https://www.webappfactory.co/jeevika/assets/images/products/prd_assam_lemon.webp",
-      "https://www.webappfactory.co/jeevika/assets/images/products/prd_assam_lemon.webp",
+      "https://5.imimg.com/data5/ANDROID/Default/2021/5/YF/EB/BI/95501584/screenshot-20210518-115406-google-jpg-500x500.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuEFOR8WH5Oed_PDqpdbRuZ1W2p_1rp_oiiA&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGbEi3Df3Hcwlpd6KbH3qV25-W7ZfUsnE2Fg&s",
     ],
     productImg: "/assam-lemon.png",
     scientificName: "Citrus limon",
@@ -138,9 +138,9 @@ const products = [
     name: "Vermicompost",
     img: "https://www.webappfactory.co/jeevika/assets/images/products/prd_vermicompost.webp",
     productImages: [
-      "https://www.webappfactory.co/jeevika/assets/images/products/prd_vermicompost.webp",
-      "https://www.webappfactory.co/jeevika/assets/images/products/prd_vermicompost.webp",
-      "https://www.webappfactory.co/jeevika/assets/images/products/prd_vermicompost.webp",
+      "/vermin-compost.jpeg",
+      "https://cdn.shopify.com/s/files/1/0047/9730/0847/files/compost-with-redworm_480x480.jpg?v=1624826892",
+      "https://www.gandhisgardentokitchen.com/product-images/pVJwwlzjOQ.jpg/1481995000000253073/600x600",
     ],
     productImg: "/vermicompost.png",
     scientificName: "Value Addition",
@@ -202,7 +202,7 @@ const Products = () => {
               <div className="d-flex justify-content-center align-items-center mb-1">
                 <h2 className="product-name mb-0">{product.name}</h2>
               </div>
-              <p className="text-muted">{product.scientificName}</p>
+              <i className="text-muted">{product.scientificName}</i>
               <p className="product-description">{product.description}</p>
               <div className="">
                 <Link to={`/product-details/${product.id}`} state={{ product }}>
