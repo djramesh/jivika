@@ -35,11 +35,11 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link to="/about" className="nav-link hover-underline">
                 About
               </Link>
-            </li>
+            </li> */}
 
             <li className="nav-item dropdown">
               <button
@@ -109,11 +109,11 @@ const Navbar = () => {
                 Gallery
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link to="/contact" className="nav-link hover-underline">
                 Contact
               </Link>
-            </li>
+            </li> */}
           </ul>
 
           <div className="d-none d-lg-flex align-items-center gap-4">

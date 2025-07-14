@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import "../styles/clusterDetails.css"
+import "../styles/clusterDetails.css";
 
 function ClusterDetails() {
   const { clusterId } = useParams();
@@ -32,10 +32,17 @@ function ClusterDetails() {
           <h1 className="product-title">Clusters</h1>
         </div>
       </div>
-      <div
-        className="about-us d-flex flex-md-row gap-5 mt-5"
-        id="tea-cluster"
-      >
+      {/* <div className="about-us d-flex flex-md-row gap-5 mt-5">
+          <p className="text-muted mt-3">
+            The project adopts an integrated cluster-based approach to foster
+            self-employment and sustainable income generation, with a strong
+            emphasis on creating linkages across the agricultural value chain.
+            It strategically targets key objectives such as introducing
+            high-value crops, promoting bamboo cultivation, value addition and
+            transitioning towards demand-driven production systems.
+          </p>
+      </div> */}
+      <div className="about-us d-flex flex-md-row gap-5 mt-5" id="tea-cluster">
         <div className="about-us-text col-12 col-md-6">
           <h1 className="fw-semibold">
             Tea
@@ -48,24 +55,38 @@ function ClusterDetails() {
             />
           </h1>
           <p className="text-muted mt-3 lh-lg">
-            The initiatives under Tea Cluster has made significant strides in
-            improving the livelihoods of 250 small tea growers by enhancing
-            their skills, knowledge, and market linkage. The Cluster encompasses
-            100 hectares of matured tea gardens, integrating 8 villages. Soil
-            testing has been conducted in the project area for understanding the
-            nutrient levels, pH balance, and overall health of the soil. Based
-            on detailed soil test reports, necessary farm inputs for farmers in
-            our project area were calculated and distributed accordingly. Under
-            the project, initiatives were taken to encourage farmers to adopt
-            Good Agricultural Practices (GAP), including integrated nutrient
-            management (INM), proper cultural operations like pruning and
-            skiffing, through on-site demonstrations and guidance. A
-            demonstration plot has been established to showcase best practices
-            in the Digholtorong village. Additionally, efforts are underway for
-            adoption of standard post-harvest practices and facilitate efficient
-            farm-to-factory transportation, connecting growers directly with
-            nearby BLF facilities for optimal market access and financial
-            benefits.
+            <b>Empowering Small Tea Growers through Sustainable Practices:</b>{" "}
+            <br />
+            Our Tea Cluster initiative supports small tea growers across{" "}
+            <b> 8 villages (100 hectares) covering about 250+growers </b>,
+            enhancing skills, soil health, quality of leaves and market access
+            through practical, on-ground interventions. In two years, the
+            achievement has been: <br />
+            <li>
+              <b>Productivity Gains:</b> 17% increase in green leaves yield.
+            </li>
+            <li>
+              <b>Income Growth:</b> Average income/ha increased by 54%.{" "}
+            </li>
+            <li>
+              <b>Improved Quality:</b> Fine Leaf Count (FLC) improved from 0% to
+              28%, enhancing market value.{" "}
+            </li>
+            <li>
+              <b>Efficient Transport:</b> Nylon bag usage and dedicated vehicles
+              ensure quality during transit.{" "}
+            </li>
+            <li>
+              <b>Direct Market Linkages:</b> Growers connected to BLFs, reducing
+              intermediaries and boosting profits.{" "}
+            </li>
+            <li>
+              <b>On-ground Support:</b> Regular field monitoring, FLC tracking,
+              and adoption of Good Agri Practices.{" "}
+            </li>
+            <li>
+              Farmers have been supported with high-quality essential inputs.{" "}
+            </li>
           </p>
         </div>
         <div
@@ -112,36 +133,72 @@ function ClusterDetails() {
             />
           </h1>
           <p className="text-muted mt-3 lh-lg">
-            <b>Khasi Mandarins :</b> The project encompasses, 25 hectares of
-            mature Khasi Mandarin orchards, involving 50 dedicated farmers. The
-            goal is to boost crop yield, quality and income. Through
-            comprehensive training and provision of essential inputs, the
-            project aims to empower growers with effective management skills
-            while ensuring soil fertility and plant health. Produce from the
-            project area were sent to grade analysis at CPCRS, Tinsukia for for
-            quality assessment. A demonstration plot at Puroni Motapung serves
-            as a beacon of best practices in sustainable cultivation, inspiring
-            the community towards proper cultural operations and orchard
-            management. Market linkages are strengthened via exhibitions at
-            various locations offering growers broader sales opportunities and
-            gain maximum financial benefit.
+            <li>
+              <b>Khasi Mandarin </b>
+            </li>
+            This initiative focuses on revitalizing traditional Khasi
+            Mandarinorchards by addressing poor management and reducing
+            climate-related risks—helping farmers adopt better practices and
+            improve their livelihoods.
+            <li>
+              Yield & productivity improved by over 50% through better orchard
+              care and timely interventions.{" "}
+            </li>
+            <li>
+              Improved pruning and pest control led to healthier fruits with
+              higher market demand.{" "}
+            </li>
+            <li>
+              Equipped farmers with quality assessment tools for understanding
+              the grading standards.
+            </li>
+            <li>
+              A demo orchard in PuroniMotapung showcases sustainable farming
+              techniques.
+            </li>
+            <li>
+              Market exposure expanded through participation in exhibitions and
+              direct buyer linkages.{" "}
+            </li>
+            <li>
+              Farmers have been supported with high-quality essential inputs.{" "}
+            </li>
           </p>
         </div>
       </div>
       <div className="about-us d-flex flex-column flex-md-row gap-5 mt-5">
         <div className="about-us-text col-12 col-md-6">
           <p className="text-muted mt-3 lh-lg">
-            <b>Assam Lemon :</b> Assam Lemon, known for its unique aroma, is a
-            prominent citrus fruit which also records highest productivity from
-            our project area. It is widely appreciated for its distinct taste
-            and numerous health benefits, making it a valuable crop for both
-            local consumption and export markets. The project has covered 10 Ha
-            of cultivable land and extending support to 38 growers till date.
-            Through on-site demonstrations and input application monitoring,
-            growers were encouraged to adopt Good Agricultural Practices (GAP)
-            since the inception days. A demonstration plot has been established
-            at Borgaon to showcase best practices and serve as a model for
-            sustainable lemon cultivation.
+            <li>
+              <b>Assam Lemon :</b>
+            </li>
+            This elongated variety of lime, native to Assam and part of the
+            Rutaceae family, is often called the “Queen of Citrus” for its
+            distinctive aroma, taste, and health benefits. It’s also one of the
+            highest-yielding crops in our project area.
+            <li>
+              The crop is promoted on a commercial scale among small and
+              marginal farmers.{" "}
+            </li>
+            <li>
+              Farmers guided on Good Agricultural Practices (GAP) from the
+              beginning.
+            </li>
+            <li>
+              Ensuring adoption of GAP through intensive extension activities.
+            </li>
+            <li>
+              Regular field visits ensuring adoption of recommended package of
+              practices which includes scientific use of inputs.{" "}
+            </li>
+            <li>
+              A demonstration plot in Borgaon showcases sustainable lemon
+              cultivation techniques.
+            </li>
+            <li>
+              Farmers have been supported with high-quality planting materials
+              and essential inputs.{" "}
+            </li>
           </p>
         </div>
         <div
@@ -194,38 +251,67 @@ function ClusterDetails() {
             />
           </h1>
           <p className="text-muted mt-3 lh-lg">
-            <b>Black Pepper :</b> Black pepper, is one of the most widely used
-            spices globally, prized for its pungent flavor and culinary
-            versatility often referred to as “king of spice” due to its
-            historical significance and economic importance. Black pepper
-            continues to be a staple in kitchens worldwide, adding depth and
-            spice to a wide array of dishes, from savory to sweet. Jeevika
-            project has covered 70 beneficiaries, providing them with good
-            quality planting materials, comprehensive training, and input
-            supplies. Project aims to empower and encourage the participants by
-            equipping them with the necessary resources and on site
-            demonstrative training to enhance their productivity and
-            sustainability.
+            Assam’s unique climate and soil make it ideal for cultivating a
+            variety of high-value spices like ginger, turmeric, king chili (Bhut
+            Jolokia), bay leaves, and black pepper. Most of these are grown with
+            minimal chemical input, making them naturally organic. The state is
+            one of India’s top producers of ginger and turmeric, known for their
+            strong aroma and medicinal value. Specialty spices like King Chilli
+            and high-curcumin turmeric varieties add to Assam’s rich spice
+            portfolio. With the right support in processing, storage, and market
+            access, Assam’s spices hold immense potential for both domestic and
+            global markets. Under the project, beneficiaries are grouped under
+            Producer Groups (PGs) and would be linked with Spice Processing
+            Plant being established. Interventions include the following:
+            <br />
+            <li>
+              <b>Black Pepper:</b>
+            </li>
+            Black Gold Known for its strong flavour, black pepper holds a
+            special place in both kitchens. There is growing global demand.
+            Under the Jeevika project, we’re helping farmers tap into its full
+            potential through hands-on support and training. One of the key
+            objectives of promoting black pepper is for interplanting in Tea
+            small holdings, broad base income basket.
+            <li>
+              Farmers have been supported with high-quality planting materials
+              and essential inputs.{" "}
+            </li>
+            <li>
+              On-site demonstrations and expert guidance to improve crop care
+              and disease management.{" "}
+            </li>
+            <li>
+              Focus on boosting productivity and ensuring sustainable pepper
+              cultivation.{" "}
+            </li>
+            <li>
+              Healthy vine growth observed, with flowering in progress in
+              several gardens.{" "}
+            </li>
+            <li>
+              Promoting interplanting in Tea holdings using shade trees as
+              standards.{" "}
+            </li>
           </p>
         </div>
       </div>
       <div className="about-us d-flex flex-column flex-md-row gap-5 mt-5">
         <div className="about-us-text col-12 col-md-6">
           <p className="text-muted mt-3 lh-lg">
-            <b>Ginger :</b> The high commercial value of ginger makes its
-            cultivation a profitable venture, significantly enhancing the
-            livelihoods of small farmers. Project has extended support to 229
-            farmers covering 50 Ha. Under the project, farmers are encouraged to
-            take up ginger cultivation as a source of livelihood and income
-            enhancement prospect. Growers were guided thoroughly from the
-            selection of good quality planting materials, seed treatment,
-            spacing etc till post harvest handling for better yield and income.
-            Turmeric: Similarly, The project has encouraged farmers to grow
-            Turmeric due to its high market demand in National market. A total
-            of 118 farmers covering 25 ha having suitable land for turmeric
-            cultivation were selected and trained to adopt all the scientific
-            practices, not only to get higher yield but also to improve soil
-            health.
+            <li>
+              <b>Ginger & Turmeric:</b>
+            </li>{" "}
+            High-Value Crops for Sustainable Livelihoods Ginger and turmeric are
+            promoted under the project on a commercial scale in small and
+            marginal holdings, as a part of crop diversification and developing
+            Spice Value Chains to boost farmer’s income. <br />
+            <li>
+              <b>Ginger:</b> Farmers are supported with high yielding quality
+              rhizomes, seed treatment, proper spacing, post-harvest and market
+              linkage.
+            </li>
+            <br />
           </p>
         </div>
         <div
@@ -265,34 +351,45 @@ function ClusterDetails() {
         </div>
         <div className="about-us-text col-12 col-md-6">
           <p className="text-muted mt-3 lh-lg">
-            <b>Turmeric :</b> Similarly, The project has encouraged farmers to
-            grow Turmeric due to its high market demand in National market. A
-            total of 118 farmers covering 25 ha having suitable land for
-            turmeric cultivation were selected and trained to adopt all the
-            scientific practices, not only to get higher yield but also to
-            improve soil health.
+            <b>Turmeric:</b> Cultivation is encouraged on suitable land with
+            training on scientific practices, aiming to improve both crop
+            productivity and soil health. Farmers are encouraged to undertake
+            value -addition practices.
           </p>
         </div>
       </div>
       <div className="about-us d-flex flex-column flex-md-row gap-5 mt-5">
         <div className="about-us-text col-12 col-md-6">
           <p className="text-muted mt-3 lh-lg">
-            <b>Naga Chilli :</b> Naga Chilli is one of the hottest chilli in the
-            world, originating from the North Eastern States. Beyond its intense
-            pungency, Naga chilli is also appreciated for its unique flavor,
-            which adds depth to dishes. It is used in various culinary
-            applications, including sauces, pickles, and traditional recipes.
-            Additionally, Naga chili has been studied for its potential health
-            benefits, such as its antioxidant properties and potential to boost
-            metabolism. Considering the potential and commercial value of Naga
-            chili, the Oil Jeevika Project has extended support to 25 farmers,
-            covering 5 hectares of land for fresh plantations and scaling up for
-            commercial purposes. This initiative aims to enhance the income of
-            the growers by leveraging the high market demand and premium pricing
-            of Naga chili. By providing the necessary resources, training, and
-            support, the project seeks to empower these farmers, improve their
-            livelihoods, and contribute to the sustainable development of the
-            local agricultural economy.
+            <li>
+              <b>King Chilli:</b>
+            </li>
+            Premium Returns Native to the Northeast, King Chilli—also known as
+            BhootJholokia—is one of the hottest chillies in the world, prized
+            for its intense heat and smoky flavour. It’s widely used in local
+            cuisine and value-added products like sauces and pickles, with
+            growing interest due to its health benefits and commercial value.
+            The Jeevika Project has introduced King Chilli as a high-value crop
+            to boost farmer incomes. Cultivation has been promoted on a
+            commercial scale, showing excellent market response and community
+            interest.
+            <li>
+              <b>Average Price Range:</b> ₹400–₹1,000 per kg depending on
+              quality.
+            </li>
+            <li>
+              <b>Adopted as a Cash Crop:</b> Encouraged for income
+              diversification among small and marginal farmers.
+            </li>
+            <li>
+              <b>liising Participation:</b> Strong interest from the community,
+              including active involvement from women farmers.
+            </li>
+            <li>
+              In the demonstration plot, productivity of 4.4 MT/ha was achieved.
+            </li>
+            This initiative is helping farmers tap into the growing demand for
+            premium chillies while promoting sustainable agricultural practices.
           </p>
         </div>
         <div
@@ -345,22 +442,27 @@ function ClusterDetails() {
             />
           </h1>
           <p className="text-muted mt-3 lh-lg">
-            <b>Bamboo :</b> It is one of the fastest growing crops. The project
-            proposes bamboo cultivation as a livelihood opportunity for 70
-            small-scale growers under the project intervention area covering
-            30Ha. Bamboo stands out as a species that not only aids in value
-            addition but also act as an efficient carbon sinks on an average one
-            Ha of bamboo stands absorbs approx 17 tons of carbon per year. By
-            promoting bamboo cultivation, Oil Jeevika project aims to provide
-            livelihoods prospects while contributing positively to environmental
-            conservation efforts. Growers were encouraged to grow both the
-            variety of bamboo - Bambusa tulda and Bambusa Balcooa, which have
-            high potential to store atmospheric carbon. Additionally, the
-            versatility of bamboo offers scope for various value-added products,
-            further enhancing its economic viability for local communities.
-            Hence, project has established a bamboo Agarbatti unit at Daisa
-            Village, completely led by an enthusiastic female self help group
-            from the community itself.
+            <b>Bamboo: </b>
+            Green Gold Bamboo is one of the fastest-growing crops and offers
+            both ecological and economic benefits. The Oil Jeevika project
+            promotes bamboo cultivation as a sustainable livelihood option for
+            small-scale farmers across the intervention area. By encouraging the
+            plantation of Bambusa tulda and Bambusa balcooa, which are known for
+            their high carbon storage capacity, the project supports climate
+            resilience. On average, one hectare of bamboo can absorb around
+            17-20 tons of carbon annually, making it a natural carbon sink. It
+            also supports development of microenterprises through value
+            addition.
+            <li>
+              Dual Benefit: Supports income generation and contributes to
+              environmental conservation.{" "}
+            </li>
+            <li>
+              High-Value Varieties: Focus on species with strong potential for
+              carbon storage and commercial use.{" "}
+            </li>
+            The initiative is helping communities unlock the versatile potential
+            of bamboo—from raw material to value-added products.
           </p>
         </div>
       </div>
