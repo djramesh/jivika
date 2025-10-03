@@ -44,7 +44,7 @@ const products = [
       "/black-pepper-product-img-2.JPG",
       "/black-pepper-product-img-3.JPG",
     ],
-    productImg: "/black-pepper-cluster.png",
+    productImg: "/black-pepper-cluster-1.png",
     scientificName: "Piper nigrum",
     bgColor: "radial-gradient(circle, rgb(255,193,140) 10%, transparent 70%)",
     description:
@@ -125,7 +125,7 @@ const products = [
       "https://www.webappfactory.co/jeevika/assets/images/products/prd_agarbati.webp",
       "https://www.webappfactory.co/jeevika/assets/images/products/prd_agarbati.webp",
     ],
-    productImg: "/agarbatti.png",
+    productImg: "https://www.webappfactory.co/jeevika/assets/images/products/prd_agarbati.webp",
     scientificName: "Value Addition",
     bgColor:
       "radial-gradient(circle, rgba(255, 155, 73, 0.65) 10%, transparent 70%)",
@@ -159,7 +159,7 @@ const products = [
       "/bamboo-1.jpeg",
       "/bamboo-3.jpeg",
     ],
-    productImg: "/bamboo-product.png",
+    productImg: "/bamboo.jpeg",
     icon: "https://www.webappfactory.co/jeevika/assets/images/icon/bamboo.svg",
     scientificName: "Bambusoideae",
     bgColor:

@@ -35,11 +35,11 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link to="/about" className="nav-link hover-underline">
                 About
               </Link>
-            </li>
+            </li> */}
 
             <li className="nav-item dropdown">
               <button
@@ -73,18 +73,63 @@ const Navbar = () => {
                       alt=""
                       style={{ width: "18px", height: "18px" }}
                     />
-                      Citrus
+                      Citrus
                   </Link>
                 </li>
-                <li>
-                  <Link to="/cluster/spice" className="dropdown-item">
-                    <img
-                      src="https://www.webappfactory.co/jeevika/assets/images/icon/spices.svg"
-                      alt=""
-                      style={{ width: "18px", height: "18px" }}
-                    />
-                      Spice
-                  </Link>
+                <li className="dropend">
+                  <button
+                    className="dropdown-item d-flex align-items-center justify-content-between"
+                    onMouseEnter={(e) => {
+                      const submenu = e.currentTarget.nextElementSibling;
+                      const rect = e.currentTarget.getBoundingClientRect();
+                      submenu.style.top = '0';
+                      submenu.style.left = `${rect.width}px`;
+                      submenu.classList.add("show");
+                    }}
+                    onMouseLeave={(e) => {
+                      const related = e.relatedTarget;
+                      if (!related || !related.closest('.sub-dropdown-menu')) {
+                        e.currentTarget.nextElementSibling.classList.remove("show");
+                      }
+                    }}
+                  >
+                    <span className="d-flex align-items-center">
+                      <img
+                        src="https://www.webappfactory.co/jeevika/assets/images/icon/spices.svg"
+                        alt=""
+                        style={{ width: "18px", height: "18px" }}
+                      />
+                      Spice
+                    </span>
+                    <i className="bi bi-chevron-right ms-2"></i>
+                  </button>
+                  <ul 
+                    className="dropdown-menu sub-dropdown-menu glass-dropdown"
+                    style={{ position: 'absolute' }}
+                    onMouseEnter={(e) => e.currentTarget.classList.add("show")}
+                    onMouseLeave={(e) => e.currentTarget.classList.remove("show")}
+                  >
+                    <li>
+                      <Link to="/cluster/spice" className="dropdown-item">
+                        Black Pepper
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/cluster/spice" className="dropdown-item">
+                        Ginger
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/cluster/spice" className="dropdown-item">
+                        Turmeric
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/cluster/spice" className="dropdown-item">
+                        King Chilli
+                      </Link>
+                    </li>
+                  </ul>
                 </li>
                 <li>
                   <Link to="/cluster/bamboo" className="dropdown-item">
@@ -109,11 +154,11 @@ const Navbar = () => {
                 Gallery
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link to="/contact" className="nav-link hover-underline">
                 Contact
               </Link>
-            </li>
+            </li> */}
           </ul>
 
           <div className="d-none d-lg-flex align-items-center gap-4">

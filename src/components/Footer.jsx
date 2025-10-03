@@ -26,7 +26,7 @@ function Footer() {
             <p className="footer-text">
               <a
                 href="https://www.google.com/maps/search/S.B.+Complex,+hatigaon/@26.137904,91.785799,5424m/data=!3m1!1e3?hl=en&entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D"
-                target="_blank"className="address"
+                target="_blank" className="address"
               >
                 SB Complex, H.no-5 <br />
                 Brindavan Path, Hatigaon Main Road <br />
@@ -60,8 +60,14 @@ function Footer() {
           <div className="col-md-6 col-12 mb-4 mb-md-0">
             <h4 className="footer-subtitle">About Jeevika</h4>
             <p className="footer-text">
-              We’re passionate about delivering top-tier garden and landscaping
-              services, ensuring 100% customer satisfaction with every project.
+              Jeevika Project, an initiative supported by Oil India Limited (OIL)
+              under its CSR program aimed at enhancing quality of life of rural
+              communities in the Project areas of OIL through their economic
+              upliftment, social inclusion, and sustainable development leading to
+              empowerment of the rural communities The project embraces a value
+              chain development approach in select high value
+              agri/horticulture-crops and creating entrepreneurs in both farm and
+              non-farm sectors.
             </p>
           </div>
 

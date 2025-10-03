@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import bgImage from "../assets/farmer-bg.jpg";
+import bgImage from "../assets/farmer-bg-1.jpeg";
 
 const Hero = () => {
   return (
@@ -19,9 +19,8 @@ const Hero = () => {
           <div className="col-lg-12 text-center">
             <div className="hero-content">
               <h1 className="hero-title text-white mb-4">
-                <span className="gradient-text">Enhancing</span> high-value
+                <span className="gradient-text">"Empowering </span> Rural Lives Through Sustainable <span className="gradient-text">Livelihoods</span>"- An initiative of OIL INDIA Ltd.
                 <br />
-                crop-value chains.
               </h1>
               <div className="d-flex justify-content-center gap-4 mt-5">
                 <Link to="/contact" className="custom-btn btn-primary-gradient">

@@ -34,7 +34,6 @@
 .product-content {
   position: relative;
   z-index: 2;
-  padding: 2rem;
 }
 
 .product-title {
@@ -44,11 +43,11 @@
   letter-spacing: -2px;
   text-align: center;
   color: white;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100%;
-  margin-bottom: 0;
+  align-items: center; */
+  /* height: 100%;
+  margin-bottom: 0; */
 }
 
 .product-grid {
