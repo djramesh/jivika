@@ -406,8 +406,8 @@ function ClusterDetails() {
             className="responsive-image img-fluid"
             src="/king-chilli-1.png"
             alt=""
-            width="700"
-            height="700"
+            width="500"
+            height="500"
           />
         </div>
       </div>
