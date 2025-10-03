@@ -236,8 +236,8 @@ function ClusterDetails() {
             className="responsive-image"
             src="/black-pepper-cluster-1.png"
             alt=""
-            width="700"
-            height="700"
+            width="500"
+            height="500"
           />
         </div>
         <div className="about-us-text col-12 col-md-6">
@@ -406,8 +406,8 @@ function ClusterDetails() {
             className="responsive-image img-fluid"
             src="/king-chilli-1.png"
             alt=""
-            width="500"
-            height="500"
+            width="600"
+            height="600"
           />
         </div>
       </div>
