@@ -50,12 +50,16 @@ const Navbar = () => {
                 Clusters <i className="bi bi-chevron-down ms-1"></i>
               </button>
               <ul
-                className={`dropdown-menu glass-dropdown ${
-                  isClusterOpen ? "show" : ""
-                }`}
+                className={`dropdown-menu glass-dropdown ${isClusterOpen ? "show" : ""
+                  }`}
                 onMouseEnter={() => setIsClusterOpen(true)}
                 onMouseLeave={() => setIsClusterOpen(false)}
               >
+                <li>
+                  <Link to="/clusters" className="dropdown-item">
+                     About Cluster
+                  </Link>
+                </li>
                 <li>
                   <Link to="/cluster/tea" className="dropdown-item">
                     <img
@@ -63,7 +67,7 @@ const Navbar = () => {
                       alt=""
                       style={{ width: "18px", height: "18px" }}
                     />
-                      Tea
+                    Tea
                   </Link>
                 </li>
                 <li>
@@ -73,7 +77,7 @@ const Navbar = () => {
                       alt=""
                       style={{ width: "18px", height: "18px" }}
                     />
-                      Citrus
+                    Citrus
                   </Link>
                 </li>
                 <li className="dropend">
@@ -103,7 +107,7 @@ const Navbar = () => {
                     </span>
                     <i className="bi bi-chevron-right ms-2"></i>
                   </button>
-                  <ul 
+                  <ul
                     className="dropdown-menu sub-dropdown-menu glass-dropdown"
                     style={{ position: 'absolute' }}
                     onMouseEnter={(e) => e.currentTarget.classList.add("show")}
@@ -138,7 +142,7 @@ const Navbar = () => {
                       alt=""
                       style={{ width: "18px", height: "18px" }}
                     />
-                      Bamboo
+                    Bamboo
                   </Link>
                 </li>
               </ul>
@@ -154,17 +158,23 @@ const Navbar = () => {
                 Gallery
               </Link>
             </li>
-            {/* <li className="nav-item">
+            <li className="nav-item">
+              <Link to="/about" className="nav-link hover-underline">
+                About
+              </Link>
+            </li>
+            <li className="nav-item">
               <Link to="/contact" className="nav-link hover-underline">
                 Contact
               </Link>
-            </li> */}
+            </li>
+
           </ul>
 
           <div className="d-none d-lg-flex align-items-center gap-4">
-            <a href="https://www.google.com/maps/search/S.B.+Complex,+hatigaon/@26.137904,91.785799,5424m/data=!3m1!1e3?hl=en&entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D" 
-               target="_blank" 
-               className="nav-icon-link"
+            <a href="https://www.google.com/maps/search/S.B.+Complex,+hatigaon/@26.137904,91.785799,5424m/data=!3m1!1e3?hl=en&entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              className="nav-icon-link"
             >
               <svg
                 width="24"

@@ -12,6 +12,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import About from "./components/About";
 import Gallery from "./components/Gallery";
 import Contact from "./components/Contact";
+import PartnerLogos from "./components/partnering-logo";
 function App() {
   return (
     <div className="app-container">
@@ -24,12 +25,15 @@ function App() {
             element={
               <>
                 <Hero />
-                <Clusters />
-                <Products />
+                {/* <Clusters />
+                <Products /> */}
+                <PartnerLogos />
+                 
               </>
             }
           />
           <Route path="/about" element={<About/>} />
+          <Route path="/clusters" element={<Clusters/>} />
           <Route path="/product" element={<Products />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact/>} />

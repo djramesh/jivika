@@ -3,6 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "../styles/about.css";
 import "../styles/products.css";
+import Footer from "./Footer";
 
 function About() {
   useEffect(() => {
@@ -128,10 +129,10 @@ function About() {
         >
           <img
             className="responsive-image"
-            src="/about-us-img-3.png"
+            src="/about-us-img-5.png"
             alt=""
             width="600"
-            height="400"
+            height="500"
           />
         </div>
       </div>
@@ -147,7 +148,7 @@ function About() {
         >
           <img
             className="responsive-image img-fluid"
-            src="/about-us-img-2.png"
+            src="/about-us-img-7.png"
             alt=""
             width="600"
             height="600"
@@ -261,7 +262,7 @@ function About() {
           }}
           data-aos="fade-left"
         >
-          <img className="responsive-image" src="/about_us_img.png" alt="" />
+          <img className="responsive-image" src="/about-us-img-6.png" alt="" />
         </div>
       </div>
     </div>

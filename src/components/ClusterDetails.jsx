@@ -419,23 +419,23 @@ function ClusterDetails() {
           className="about-us-image col-12 col-md-6"
           style={{
             background:
-              "radial-gradient(circle, rgba(93, 255, 61, 0.74) 10%, transparent 60%)",
+              "radial-gradient(circle, rgba(121, 255, 94, 0.67) 10%, transparent 60%)",
           }}
           data-aos="fade-right"
         >
           <img
             className="responsive-image"
-            src="/bamboo.jpeg"
+            src="/bamboo-product-1.png"
             alt=""
-            width="500"
-            height="500"
+            width="400"
+            height="400"
           />
         </div>
         <div className="about-us-text col-12 col-md-6">
           <h1 className="fw-semibold">
             Bamboo
             <img
-              src="/bamboo.png"
+              src="/bamboo-product-1.png"
               alt="Citrus Leaf"
               className="ms-2"
               width="50px"
