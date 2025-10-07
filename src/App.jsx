@@ -12,7 +12,8 @@ import ScrollToTop from "./components/ScrollToTop";
 import About from "./components/About";
 import Gallery from "./components/Gallery";
 import Contact from "./components/Contact";
-import PartnerLogos from "./components/partnering-logo";
+import PartnerLogos from "./components/Partnering-logo";
+
 function App() {
   return (
     <div className="app-container">

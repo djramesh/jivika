@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import PartnerLogos from "./partnering-logo";
+// import PartnerLogos from "./Partnering-logo";
 import bgImage from "../assets/farmer-bg-1.jpeg";
 // Import other images
 import bgImage2 from "../assets/farmer-bg-2.jpeg";
