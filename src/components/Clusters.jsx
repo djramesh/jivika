@@ -51,7 +51,7 @@ const Clusters = () => {
           <img src="/bamboo.png" alt="Bamboo" className="position-absolute float-image" style={{ width: '82px', height: '82px', top: '60px', right: '-30px' }} />
         </h1>
         <br /><br /><br />
-        <p className='mt-3'>The project adopts an integrated cluster-based approach to foster self-employment and sustainable income generation, with a strong emphasis on creating linkages across the agricultural value chain. It strategically targets key objectives such as introducing high-value crops, promoting bamboo cultivation, value addition and transitioning towards demand-driven production systems.</p>
+        <p className='mt-4'>The project adopts an integrated cluster-based approach to foster self-employment and sustainable income generation, with a strong emphasis on creating linkages across the agricultural value chain. It strategically targets key objectives such as introducing high-value crops, promoting bamboo cultivation, value addition and transitioning towards demand-driven production systems.</p>
       </div>
       <br /><br />
       <div className="clusters-grid mt-8">
