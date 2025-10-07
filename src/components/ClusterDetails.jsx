@@ -228,13 +228,13 @@ function ClusterDetails() {
           className="about-us-image col-12 col-md-6"
           style={{
             background:
-              "radial-gradient(circle, rgba(116, 255, 61, 0.52) 10%, transparent 60%)",
+              "radial-gradient(circle, rgba(255, 100, 61, 0.52) 10%, transparent 60%)",
           }}
           data-aos="fade-right"
         >
           <img
             className="responsive-image"
-            src="/black-pepper-cluster-1.png"
+            src="/black-pepper-cluster-2.png"
             alt=""
             width="500"
             height="500"
