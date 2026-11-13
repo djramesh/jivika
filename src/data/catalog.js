@@ -235,7 +235,7 @@ export const PRODUCTS = [
   {
     id: 5,
     slug: "bhoot-jolokia-king-chilli",
-    name: "Bhoot Jolokia",
+    name: "Bhoot Jolokia (King Chilli)",
     scientificName: "Capsicum chinense",
     category: "Spices",
     clusterId: "spice",

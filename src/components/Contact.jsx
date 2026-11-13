@@ -54,7 +54,7 @@ function Contact() {
 
                 <div className="d-flex flex-column gap-3 mb-4">
                   <a
-                    href="mailto:lochan.dutta@schoolnetindia.com"
+                    href="mailto:tinsukiaspicesoiety@gmail.com"
                     className="jv-contact-method"
                   >
                     <div className="jv-contact-method__icon">
@@ -62,17 +62,17 @@ function Contact() {
                     </div>
                     <div>
                       <div className="small text-muted fw-semibold">Email Desk</div>
-                      <div className="fw-bold text-break">lochan.dutta@schoolnetindia.com</div>
+                      <div className="fw-bold text-break">tinsukiaspicesoiety@gmail.com</div>
                     </div>
                   </a>
 
-                  <a href="tel:8133991098" className="jv-contact-method">
+                  <a href="tel:9613466206" className="jv-contact-method">
                     <div className="jv-contact-method__icon">
                       <i className="bi bi-telephone-fill" />
                     </div>
                     <div>
                       <div className="small text-muted fw-semibold">Phone &amp; Trade Desk</div>
-                      <div className="fw-bold">+91 8133991098</div>
+                      <div className="fw-bold">+91 96134 66206</div>
                     </div>
                   </a>
 
@@ -132,7 +132,7 @@ function Contact() {
                     </p>
                     <div className="d-flex flex-wrap justify-content-center gap-2">
                       <a
-                        href={`mailto:lochan.dutta@schoolnetindia.com?subject=${encodeURIComponent(
+                        href={`mailto:tinsukiaspicesoiety@gmail.com?subject=${encodeURIComponent(
                           `Jeevika Inquiry: ${form.topic}`
                         )}&body=${encodeURIComponent(
                           `Name: ${form.name}\nPhone: ${form.phone}\nEmail: ${form.email}\nTopic: ${form.topic}\n\n${form.message}`

@@ -278,7 +278,7 @@ const ProductDetails = () => {
               <div>
                 <div className="fw-bold small">Need custom bulk grading or FPO invoicing?</div>
                 <div className="small text-muted">
-                  Call +91 8133991098 or email lochan.dutta@schoolnetindia.com
+                  Call +91 96134 66206 or email tinsukiaspicesoiety@gmail.com
                 </div>
               </div>
               <Link to="/contact" className="jv-btn jv-btn-outline btn-sm py-2 px-3">

@@ -287,7 +287,7 @@ const CartDrawer = () => {
 
               <div className="d-grid gap-2">
                 <a
-                  href={`https://wa.me/918133991098?text=${encodeURIComponent(
+                  href={`https://wa.me/919613466206?text=${encodeURIComponent(
                     buildOrderSummaryText(submittedOrder)
                   )}`}
                   target="_blank"
@@ -298,7 +298,7 @@ const CartDrawer = () => {
                   Send Order via WhatsApp
                 </a>
                 <a
-                  href={`mailto:lochan.dutta@schoolnetindia.com?subject=${encodeURIComponent(
+                  href={`mailto:tinsukiaspicesoiety@gmail.com?subject=${encodeURIComponent(
                     `Jeevika Order ${orderRef}`
                   )}&body=${encodeURIComponent(buildOrderSummaryText(submittedOrder))}`}
                   className="jv-btn jv-btn-outline"

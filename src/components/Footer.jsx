@@ -78,15 +78,15 @@ function Footer() {
             </p>
             <div className="d-flex flex-column gap-1 small">
               <a
-                href="mailto:lochan.dutta@schoolnetindia.com"
+                href="mailto:tinsukiaspicesoiety@gmail.com"
                 className="jv-footer__link text-break"
               >
                 <i className="bi bi-envelope me-2" />
-                lochan.dutta@schoolnetindia.com
+                tinsukiaspicesoiety@gmail.com
               </a>
-              <a href="tel:8133991098" className="jv-footer__link">
+              <a href="tel:9613466206" className="jv-footer__link">
                 <i className="bi bi-telephone me-2" />
-                +91 8133991098
+                +91 96134 66206
               </a>
             </div>
           </div>
