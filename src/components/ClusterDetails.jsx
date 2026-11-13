@@ -144,11 +144,11 @@ function ClusterDetails() {
                   <img src="/spices-img.png" alt="" className="ms-2" width="34" height="34" />
                 </h2>
                 <p className="text-muted lh-lg">
-                  Assam’s naturally low-chemical agro-climate produces potent Ginger, High-Curcumin Turmeric, Black Pepper (interplanted on tea shade trees), and Bhoot Jolokiya King Chilli:
+                  Assam’s naturally low-chemical agro-climate produces potent Ginger, Turmeric, Black Pepper (interplanted on tea shade trees), and Bhoot Jolokia:
                 </p>
                 <ul className="jv-check-list mb-4">
                   <li><strong>Black Pepper Intercropping:</strong> Diversifies small tea grower income using shade standards.</li>
-                  <li><strong>King Chilli Cash Crop:</strong> Realizing ₹400–₹1,000/kg with 4.4 MT/ha demo yield.</li>
+                  <li><strong>Bhoot Jolokia Cash Crop:</strong> Realizing high-value returns with 4.4 MT/ha demo yield.</li>
                   <li><strong>Ginger &amp; Turmeric:</strong> Treated high-yielding rhizomes, spacing, and post-harvest curing.</li>
                   <li><strong>Spice Processing Plant:</strong> 150 kg/hr capacity unit for dehydrated &amp; powdered spices.</li>
                 </ul>

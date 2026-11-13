@@ -9,13 +9,13 @@ export const HERO_SLIDES = [
   {
     image: farmerBg1,
     tag: "Oil India Limited CSR Initiative",
-    title: "Direct from Assam’s Farmers to Your Table",
+    title: "Direct from Assam’s Farmers to You",
     subtitle:
       "Single-origin spices, orthodox tea, Khasi mandarin, and sustainable bamboo crafts cultivated across 14 villages in Tinsukia.",
   },
   {
     image: farmerBg2,
-    tag: "900+ Farmers Empowered",
+    tag: "1000+ Farmers Empowered",
     title: "High-Value Harvests Grown with Scientific Care",
     subtitle:
       "Adopting Good Agricultural Practices (GAP) to elevate purity, aroma, and direct farmer income.",
@@ -29,10 +29,10 @@ export const HERO_SLIDES = [
   },
   {
     image: farmerBg4,
-    tag: "Retail & B2B Wholesale",
+    tag: "Community-Owned Value Chains",
     title: "Traceable Quality Across Four Crop Clusters",
     subtitle:
-      "Partner with Jeevika for farm-fresh household packs or consistent commercial-grade wholesale supply.",
+      "Partner with Jeevika for authentic single-origin harvests directly from rural farmer collectives.",
   },
   {
     image: farmerBg5,
@@ -63,7 +63,7 @@ export const PRODUCTS = [
   {
     id: 1,
     slug: "assam-ginger",
-    name: "Nadia & Indigenous Ginger",
+    name: "Ginger",
     scientificName: "Zingiber officinale",
     category: "Spices",
     clusterId: "spice",
@@ -106,7 +106,7 @@ export const PRODUCTS = [
   {
     id: 2,
     slug: "high-curcumin-turmeric",
-    name: "High-Curcumin Assam Turmeric",
+    name: "Turmeric",
     scientificName: "Curcuma longa",
     category: "Spices",
     clusterId: "spice",
@@ -149,7 +149,7 @@ export const PRODUCTS = [
   {
     id: 3,
     slug: "assam-black-pepper",
-    name: "Tea-Shade Black Pepper",
+    name: "Black Pepper",
     scientificName: "Piper nigrum",
     category: "Spices",
     clusterId: "spice",
@@ -192,7 +192,7 @@ export const PRODUCTS = [
   {
     id: 4,
     slug: "khasi-mandarin",
-    name: "Khasi Mandarin Oranges",
+    name: "Khasi Mandarin",
     scientificName: "Citrus reticulata",
     category: "Citrus",
     clusterId: "citrus",
@@ -235,7 +235,7 @@ export const PRODUCTS = [
   {
     id: 5,
     slug: "bhoot-jolokia-king-chilli",
-    name: "Bhoot Jolokiya (King Chilli)",
+    name: "Bhoot Jolokia",
     scientificName: "Capsicum chinense",
     category: "Spices",
     clusterId: "spice",
@@ -244,15 +244,13 @@ export const PRODUCTS = [
     rating: 4.9,
     reviewCount: 71,
     inStock: true,
-    img: "/king-chilli.png",
-    productImg: "/king-chilli-1.png",
-    productImages: ["/king-chilli.png", "/king-chilli-1.png"],
-    missingPhotosHint:
-      "Add 2–3 fresh/dried harvest & packaging photos for Bhoot Jolokiya (e.g., public/king-chilli-1.jpg, king-chilli-2.jpg).",
+    img: "/bhoot-jolokia.jpg",
+    productImg: "/bhoot-jolokia.jpg",
+    productImages: ["/bhoot-jolokia.jpg", "/king-chilli.png", "/king-chilli-1.png"],
     shortDescription:
-      "Authentic Northeast Indian Naga King Chilli prized globally for intense Scoville heat and smoky aroma.",
+      "Authentic Northeast Indian Bhoot Jolokia prized globally for intense Scoville heat and smoky aroma.",
     description:
-      "Introduced on a commercial scale in FY 23–24 under Jeevika with active participation from women farmers, our Bhoot Jolokiya delivers exceptional potency (4.4 MT/ha demo yield) and commands premium national & export rates.",
+      "Introduced on a commercial scale in FY 23–24 under Jeevika with active participation from women farmers, our Bhoot Jolokia delivers exceptional potency (4.4 MT/ha demo yield) and commands premium national & export rates.",
     highlights: [
       "Among the world's hottest chillies with distinctive fruity-smoky notes",
       "Boosts metabolism and rich in capsaicin antioxidants",
@@ -275,7 +273,7 @@ export const PRODUCTS = [
   {
     id: 6,
     slug: "assam-lemon",
-    name: "Kaji Nemu (Assam Lemon)",
+    name: "Assam Lemon",
     scientificName: "Citrus limon",
     category: "Citrus",
     clusterId: "citrus",
@@ -315,7 +313,7 @@ export const PRODUCTS = [
   {
     id: 7,
     slug: "assam-small-grower-tea",
-    name: "Single-Origin Assam Tea",
+    name: "Assam Tea",
     scientificName: "Camellia sinensis",
     category: "Tea",
     clusterId: "tea",
@@ -353,7 +351,7 @@ export const PRODUCTS = [
   {
     id: 8,
     slug: "shg-agarbatti-sticks",
-    name: "Women SHG Bamboo Agarbatti Sticks",
+    name: "Bamboo Agarbatti",
     scientificName: "Hand-Rolled Value Addition",
     category: "Bamboo & Craft",
     clusterId: "bamboo",
@@ -393,7 +391,7 @@ export const PRODUCTS = [
   {
     id: 9,
     slug: "organic-vermicompost",
-    name: "Jeevika Bio-Rich Vermicompost",
+    name: "Vermicompost",
     scientificName: "Organic Soil Conditioner",
     category: "Agri-Inputs",
     clusterId: "bamboo",
@@ -433,7 +431,7 @@ export const PRODUCTS = [
   {
     id: 10,
     slug: "assam-sustainable-bamboo",
-    name: "Treated Assam Bamboo Culms & Craft",
+    name: "Bamboo Culms",
     scientificName: "Bambusa tulda & B. balcooa",
     category: "Bamboo & Craft",
     clusterId: "bamboo",
@@ -507,7 +505,7 @@ export const CLUSTERS = [
     coverage: "4 Heritage Spices • Processing Unit",
     impactStat: "150 kg/hr Processing",
     description:
-      "Commercial cultivation of Black Pepper, Ginger, High-Curcumin Turmeric, and Bhoot Jolokiya King Chilli linked with Producer Groups and spice value addition.",
+      "Commercial cultivation of Black Pepper, Ginger, Turmeric, and Bhoot Jolokia linked with Producer Groups and spice value addition.",
   },
   {
     id: "bamboo",
@@ -542,7 +540,7 @@ export const GALLERY_ITEMS = [
 ];
 
 export const IMPACT_METRICS = [
-  { value: "900+", label: "Farmers Trained on GAP", detail: "Across 14 villages in Guijan & Hapjan" },
+  { value: "1000+", label: "Farmers Trained on GAP", detail: "Across 14 villages in Guijan & Hapjan" },
   { value: "+54%", label: "Tea Net Income Growth", detail: "250+ small tea growers across 100 ha" },
   { value: "+51%", label: "Mandarin Productivity", detail: "Peak orchard yield up to 11.7 MT/ha" },
   { value: "29", label: "Vermicompost Enterprises", detail: "250 MT/year organic production capacity" },

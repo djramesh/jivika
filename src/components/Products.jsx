@@ -74,7 +74,7 @@ const Products = () => {
           </span>
           <h1 className="jv-page-banner__title">Jeevika Marketplace</h1>
           <p className="jv-page-banner__desc">
-            Single-origin Assam spices, tea, citrus, bamboo crafts, and bio-inputs harvested by our 900+ partner farmers.
+            Single-origin Assam spices, tea, citrus, bamboo crafts, and bio-inputs harvested by our 1000+ partner farmers.
           </p>
         </div>
       </section>

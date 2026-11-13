@@ -40,7 +40,7 @@ const Navbar = () => {
     <header className="jv-header">
       <div className="jv-announcement">
         <span>
-          Direct from <strong>14 Villages in Tinsukia, Assam</strong> • Single-Origin Produce &amp; Crafts • Retail &amp; B2B Wholesale
+          Direct from <strong>14 Villages in Tinsukia, Assam</strong> • Single-Origin Produce &amp; Rural Crafts
         </span>
       </div>
 

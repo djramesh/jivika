@@ -128,8 +128,8 @@ function About() {
                 <ul className="jv-approach-list">
                   <li><strong>Khasi Mandarin:</strong> Average productivity up 51% (3.9 to 5.8 MT/ha; peak 11.7 MT/ha).</li>
                   <li><strong>Tea:</strong> 56% unit price realization &amp; 52% net farm income increase via direct BLF linkage.</li>
-                  <li><strong>King Chilli:</strong> Commercial introduction achieving ₹400/kg to ₹1,000/kg price realization.</li>
-                  <li><strong>900+ Farmers Trained:</strong> 60%–100% adoption of Good Agricultural Practices (GAP).</li>
+                  <li><strong>Bhoot Jolokia:</strong> Commercial introduction achieving robust farm price realization.</li>
+                  <li><strong>1000+ Farmers Trained:</strong> 60%–100% adoption of Good Agricultural Practices (GAP).</li>
                   <li><strong>Agarbatti &amp; Vermicompost:</strong> 20-member all-women SHG rolling unit &amp; 29 vermicompost enterprises (250 MT/yr).</li>
                   <li><strong>Spice Processing Unit:</strong> 150 kg/hr facility for dehydrated &amp; powdered ginger, turmeric, and black pepper.</li>
                 </ul>

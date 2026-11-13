@@ -25,7 +25,7 @@ function Footer() {
                 className="px-3 py-1 rounded-pill"
                 style={{ background: "rgba(255,255,255,0.08)", color: "#f8d48b" }}
               >
-                900+ Farmers
+                1000+ Farmers
               </span>
             </div>
           </div>

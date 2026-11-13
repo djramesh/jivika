@@ -23,7 +23,7 @@ const Home = () => {
       <section className="jv-trust-strip" aria-label="Jeevika Promises">
         <div className="jv-container">
           <div className="row g-4">
-            <div className="col-12 col-sm-6 col-lg-3">
+            <div className="col-12 col-md-4">
               <div className="jv-trust-item">
                 <div className="jv-trust-item__icon">
                   <i className="bi bi-geo-alt-fill" />
@@ -34,18 +34,18 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="col-12 col-sm-6 col-lg-3">
+            <div className="col-12 col-md-4">
               <div className="jv-trust-item">
                 <div className="jv-trust-item__icon">
                   <i className="bi bi-award-fill" />
                 </div>
                 <div>
                   <h3>Scientific GAP Quality</h3>
-                  <p>900+ farmers trained in Good Agricultural Practices for clean, high-potency crops.</p>
+                  <p>1000+ farmers trained in Good Agricultural Practices for clean, high-potency crops.</p>
                 </div>
               </div>
             </div>
-            <div className="col-12 col-sm-6 col-lg-3">
+            <div className="col-12 col-md-4">
               <div className="jv-trust-item">
                 <div className="jv-trust-item__icon">
                   <i className="bi bi-people-fill" />
@@ -53,17 +53,6 @@ const Home = () => {
                 <div>
                   <h3>Women SHG Led</h3>
                   <p>Value-added craft units &amp; spice collectives empowering rural women entrepreneurs.</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-12 col-sm-6 col-lg-3">
-              <div className="jv-trust-item">
-                <div className="jv-trust-item__icon">
-                  <i className="bi bi-box-seam-fill" />
-                </div>
-                <div>
-                  <h3>Retail &amp; B2B Ready</h3>
-                  <p>Order household packs online or request commercial bulk crates with GST invoicing.</p>
                 </div>
               </div>
             </div>
