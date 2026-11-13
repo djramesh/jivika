@@ -1,270 +1,156 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
+import { IMPACT_METRICS } from "../data/catalog";
+import SmartImage from "./SmartImage";
 import "../styles/about.css";
-import "../styles/products.css";
-import Footer from "./Footer";
 
 function About() {
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
-
   return (
-    <div className="container-fluid">
-      <div className="products-section">
-        <div className="product-bg">
-          <img src="/abt_bnr_img.jpg" alt="products" />
-        </div>
-        <div className="product-overlay"></div>
-        <div className="product-content">
-          <h1 className="product-title">About us</h1>
-        </div>
-      </div>
-      <div className="about-us d-flex flex-column flex-md-row gap-5 mt-5">
-        <div className="about-us-text col-12 col-md-6">
-          <h1 className="fw-semibold">About The Project</h1>
-          <p className="text-muted mt-3 lh-lg">
-            Jeevika Project, an initiative supported by Oil India Limited (OIL)
-            under its CSR program aimed at enhancing quality of life of rural
-            communities in the Project areas of OIL through their economic
-            upliftment, social inclusion, and sustainable development leading to
-            empowerment of the rural communities The project embraces a value
-            chain development approach in select high value
-            agri/horticulture-crops and creating entrepreneurs in both farm and
-            non-farm sectors. The interventions seek to address, high
-            unemployment and low human development indicators by offering a mix
-            of practical support, training, and institution building. Launched
-            on <b>19th December 2022</b>, the project is being implemented in{" "}
-            <b>14 villages across Guijan and Hapjan blocks in the Tinsukia</b>{" "}
-            district of Assam.
+    <div>
+      <section className="jv-page-banner">
+        <SmartImage
+          src="/abt_bnr_img.jpg"
+          alt="About Jeevika"
+          className="jv-page-banner__bg"
+        />
+        <div className="jv-page-banner__scrim" />
+        <div className="jv-container jv-page-banner__content">
+          <span
+            className="jv-eyebrow"
+            style={{ background: "rgba(255,255,255,0.14)", color: "#f8d48b" }}
+          >
+            Oil India Limited CSR Initiative
+          </span>
+          <h1 className="jv-page-banner__title">About Project Jeevika</h1>
+          <p className="jv-page-banner__desc">
+            Launched on 19th December 2022 across 14 villages in Guijan and Hapjan blocks, Tinsukia, Assam.
           </p>
         </div>
-        <div
-          className="about-us-image col-12 col-md-6 mt-3"
-          style={{
-            background:
-              "radial-gradient(circle, rgba(93, 255, 61, 0.52) 10%, transparent 60%)",
-          }}
-          data-aos="fade-left"
-        >
-          <img className="responsive-image" src="/about_us_img.png" alt="" />
+      </section>
+
+      <section className="jv-section">
+        <div className="jv-container">
+          {/* Metrics Strip */}
+          <div className="row g-3 mb-5">
+            {IMPACT_METRICS.map((m, idx) => (
+              <div key={idx} className="col-6 col-lg-3">
+                <div
+                  className="p-4 rounded-4 h-100"
+                  style={{
+                    background: "var(--bg-surface)",
+                    border: "1px solid var(--border-subtle)",
+                  }}
+                >
+                  <div
+                    className="font-display fw-bold mb-1"
+                    style={{ fontSize: "2rem", color: "var(--bg-forest)" }}
+                  >
+                    {m.value}
+                  </div>
+                  <div className="fw-bold small mb-1">{m.label}</div>
+                  <div className="text-muted" style={{ fontSize: "0.78rem" }}>
+                    {m.detail}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* About Project */}
+          <div className="jv-about-card mb-4">
+            <div className="row g-4 align-items-center">
+              <div className="col-12 col-lg-6">
+                <span className="jv-eyebrow">The Initiative</span>
+                <h2 className="font-display h2 mb-3">Empowering Rural Communities Through Value Chains</h2>
+                <p className="text-muted lh-lg mb-0">
+                  Jeevika Project, supported by <strong>Oil India Limited (OIL)</strong> under its CSR program, aims to enhance the quality of life of rural communities through economic upliftment, social inclusion, and sustainable enterprise building. Adopting a cluster value-chain approach across high-value agricultural and horticultural crops, the initiative creates both farm and non-farm entrepreneurs across <strong>14 villages in Guijan and Hapjan blocks, Tinsukia</strong>.
+                </p>
+              </div>
+              <div className="col-12 col-lg-6">
+                <div className="jv-about-img-frame">
+                  <SmartImage src="/about_us_img.png" alt="Jeevika Project Overview" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Mission */}
+          <div className="jv-about-card mb-4">
+            <div className="row g-4 align-items-center">
+              <div className="col-12 col-lg-6 order-lg-2">
+                <span className="jv-eyebrow jv-eyebrow--gold">Our Mission</span>
+                <h2 className="font-display h2 mb-3">Transforming Smallholders into Micro-Enterprises</h2>
+                <p className="text-muted lh-lg">
+                  Oil India Limited (OIL) is committed to engaging with local communities to enhance economic opportunities through:
+                </p>
+                <ul className="jv-approach-list">
+                  <li>Enhancement of net income of rural households.</li>
+                  <li>Promotion of inclusive, collective, and sustainable growth across farm and non-farm sectors.</li>
+                  <li>Equipping individuals and SHGs with practical tools, scientific training, and market access.</li>
+                  <li>Transforming small and marginal farmers into resilient micro-enterprises.</li>
+                </ul>
+              </div>
+              <div className="col-12 col-lg-6 order-lg-1">
+                <div className="jv-about-img-frame">
+                  <SmartImage src="/about-us-img-2.png" alt="Jeevika Mission" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Approach & Interventions */}
+          <div className="jv-about-card mb-4">
+            <div className="row g-4 align-items-center">
+              <div className="col-12 col-lg-6">
+                <span className="jv-eyebrow">Our Approach</span>
+                <h2 className="font-display h2 mb-3">Cluster Strategy &amp; Key Interventions</h2>
+                <ul className="jv-approach-list">
+                  <li><strong>Crop Diversification:</strong> Multi-cropping systems &amp; commercial high-value horticulture.</li>
+                  <li><strong>Productivity Enhancement:</strong> Tailored agronomic inputs across Tea, Citrus, Spices &amp; Bamboo.</li>
+                  <li><strong>Scientific GAP &amp; Demo Plots:</strong> On-farm demonstration plots bridging extension knowledge gaps.</li>
+                  <li><strong>Institution Building:</strong> Strengthening Self-Help Groups (SHGs) &amp; Farmer Producer Organizations (FPOs).</li>
+                  <li><strong>Women-First Entrepreneurship:</strong> Prioritizing women participation in value addition &amp; marketing.</li>
+                </ul>
+              </div>
+              <div className="col-12 col-lg-6">
+                <div className="jv-about-img-frame">
+                  <SmartImage src="/about-us-img-5.png" alt="Jeevika Cluster Approach" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Detailed Impact */}
+          <div className="jv-about-card">
+            <div className="row g-4 align-items-center">
+              <div className="col-12 col-lg-6 order-lg-2">
+                <span className="jv-eyebrow jv-eyebrow--gold">Ground Results</span>
+                <h2 className="font-display h2 mb-3">Farm &amp; Non-Farm Impact Highlights</h2>
+                <ul className="jv-approach-list">
+                  <li><strong>Khasi Mandarin:</strong> Average productivity up 51% (3.9 to 5.8 MT/ha; peak 11.7 MT/ha).</li>
+                  <li><strong>Tea:</strong> 56% unit price realization &amp; 52% net farm income increase via direct BLF linkage.</li>
+                  <li><strong>King Chilli:</strong> Commercial introduction achieving ₹400/kg to ₹1,000/kg price realization.</li>
+                  <li><strong>900+ Farmers Trained:</strong> 60%–100% adoption of Good Agricultural Practices (GAP).</li>
+                  <li><strong>Agarbatti &amp; Vermicompost:</strong> 20-member all-women SHG rolling unit &amp; 29 vermicompost enterprises (250 MT/yr).</li>
+                  <li><strong>Spice Processing Unit:</strong> 150 kg/hr facility for dehydrated &amp; powdered ginger, turmeric, and black pepper.</li>
+                </ul>
+                <div className="mt-4 d-flex flex-wrap gap-2">
+                  <Link to="/product" className="jv-btn jv-btn-primary">
+                    Shop Jeevika Products
+                  </Link>
+                  <Link to="/gallery" className="jv-btn jv-btn-outline">
+                    View Field Gallery
+                  </Link>
+                </div>
+              </div>
+              <div className="col-12 col-lg-6 order-lg-1">
+                <div className="jv-about-img-frame">
+                  <SmartImage src="/about-us-img-6.png" alt="Jeevika Impact" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div className="about-us d-flex flex-column flex-md-row gap-5 mt-5">
-        <div
-          className="about-us-image col-12 col-md-6"
-          style={{
-            background:
-              "radial-gradient(circle, rgb(232, 255, 28) 10%, transparent 70%)",
-            borderRadius: "20px",
-          }}
-          data-aos="fade-right"
-        >
-          <img
-            className="responsive-image img-fluid"
-            src="/about-us-img-2.png"
-            alt=""
-            width="600"
-            height="600"
-          />
-        </div>
-        <div className="about-us-text col-12 col-md-6">
-          <h1 className="fw-semibold">Our Mission</h1>
-          <p className="text-muted mt-3 lh-lg">
-            <b>Oil India Limited (OIL)</b> is committed to engage with the local
-            communities in its project areas to enhance economic opportunities
-            as a part of its commitment to improve their quality of life
-            through,
-            <li>Enhancement of income of rural households.</li>
-            <li>
-              Promotion of inclusive, collective, and sustainable growth across
-              farm and non-farm sectors.{" "}
-            </li>
-            <li>
-              Empowering individuals and groups with the right tools, training,
-              and resources to move toward economic stability and social
-              empowerment.
-            </li>{" "}
-            <li>
-              Transforming small and marginal farmers to micro-enterprises.
-            </li>{" "}
-            The initiative works to build self-reliant rural communities
-            equipped with skills, resources, and market access to ensure
-            long-term growth.
-          </p>
-        </div>
-      </div>
-      <div className="about-us d-flex flex-column flex-md-row gap-5 mt-5">
-        <div className="about-us-text col-12 col-md-6">
-          <h1 className="fw-semibold">Our Approach</h1>
-          <p className="text-muted mt-3 lh-lg">
-            The Project JEEVIKA adopts a cluster-based approach with the
-            following strategies :{" "}
-          </p>
-          <ul className="approach-list text-muted mt-3 lh-lg">
-            <li>
-              Introduction and Promotion of high value crops on a commercial
-              scale.
-            </li>
-            <li>
-              Revitalization of traditional crops/industries and enhancing
-              productivity.
-            </li>
-            <li>
-              Development, creation and nurturing of grassroot level
-              commodity-based organization.
-            </li>
-            <li>Value addition within the local community.</li>
-            <li>Entrepreneurship development-priority for women.</li>
-          </ul>
-        </div>
-        <div
-          className="about-us-image col-12 col-md-6"
-          style={{
-            background:
-              "radial-gradient(circle, rgba(93, 255, 61, 0.52) 10%, transparent 60%)",
-          }}
-          data-aos="fade-up"
-        >
-          <img
-            className="responsive-image"
-            src="/about-us-img-5.png"
-            alt=""
-            width="600"
-            height="500"
-          />
-        </div>
-      </div>
-      <div className="about-us d-flex flex-column flex-md-row gap-5 mt-5">
-        <div
-          className="about-us-image col-12 col-md-6"
-          style={{
-            background:
-              "radial-gradient(circle, rgb(232, 255, 28) 10%, transparent 70%)",
-            borderRadius: "20px",
-          }}
-          data-aos="fade-right"
-        >
-          <img
-            className="responsive-image img-fluid"
-            src="/about-us-img-7.png"
-            alt=""
-            width="600"
-            height="600"
-          />
-        </div>
-        <div className="about-us-text col-12 col-md-6">
-          {/* <h1 className="fw-semibold">Our Mission</h1> */}
-          <p className="text-muted mt-3 lh-lg">
-            <b>The project interventions are :</b>{" "}
-            <li>
-              <b>Crop Diversification :</b> Encouraging the use of multiple
-              cropping systems and introducing high-value horticultural crops to
-              make the best use of limited land and increase farm income.
-            </li>
-            <li>
-              <b>Productivity enhancement :</b> Working across four key clusters
-              – Tea, Citrus, Spices, and Bamboo – with tailored technical
-              training and farm input support.{" "}
-            </li>
-            <li>
-              <b>Bridging Knowledge Gaps :</b> Minimizing the extension gap
-              between agricultural experts and local farmers.{" "}
-            </li>
-            <li>
-              <b>Scientific Agricultural Practices :</b> Promoting modern and
-              efficient methods to enhance farm productivity through right use
-              of inputs, on farm trainings through demonstration plots
-              established in farmer’s field.
-            </li>
-            <li>
-              <b>Value addition, Market Linkages & Digital Connectivity :</b>{" "}
-              Facilitating value addition, market access, and digital engagement
-              for better outreach and visibility.{" "}
-            </li>
-            <li>
-              <b>Entrepreneurship Support :</b> Providing training, mentoring,
-              and business development services to aspiring entrepreneurs{" "}
-            </li>
-            <li>
-              <b>Institution Building :</b> Strengthening local institutions
-              such as Self-Help Groups (SHGs) and Farmer Producer Organizations
-              (FPOs) to ensure long-term sustainability.
-            </li>
-            <li>
-              <b>Need based Implementation Support :</b> Customized solutions,
-              community involvement & perseverance.
-            </li>
-          </p>
-        </div>
-      </div>
-      <div className="about-us d-flex flex-column flex-md-row gap-5 mt-5">
-        <div className="about-us-text col-12 col-md-6">
-          <h1 className="fw-semibold">Impact</h1>
-          <p className="text-muted mt-3 lh-lg">
-            With a focus on <b>empowerment and sustainability</b>, the project
-            is actively transforming rural livelihoods while fostering a more
-            resilient and self-reliant community ecosystem. Key highlights
-            include the following, <br />
-            <b>Key Highlights: Farm Based Activities : </b>
-            {""}
-            <li>
-              <b>Khasi Mandarin:</b> average productivity increased by 51%: 3.9
-              MT/ha in FY 23-24 to 5.8 MT/ha. Highest productivity recorded was
-              11.7 MT/ha.
-            </li>
-            <li>
-              <b>Tea:</b> unit price realization was 56% & 52% increase in net
-              farm income among project participants. Facilitated direct market
-              linkage with BLF through producer groups, reducing number of
-              intermediaries involved. Promoting interplanting of Tea with black
-              pepper.
-            </li>
-            <li>
-              <b>King Chilli:</b> introduced on a Commercial Scale in FY 23-24,
-              and farmers generated substantial revenue. Unit price realization
-              ranged from ₹400/kg to ₹1,000/kg.
-            </li>
-            <li>Commodity specific village level collectives formed.</li>
-            <li>
-              Adoption level of the scientific package of practices after a year
-              of implementation is between 60-65% to 100% depending upon the
-              crops.
-            </li>
-            <li>
-              Around 900 farmers have been trained on Good Agriculture Practices
-              (GAP) .
-            </li>
-            <br />
-            <b>Key Highlights:Non-Farm based Activities:</b>
-            <li>
-              <b>Bamboo Agarbatti Rolling Unit: </b> 100% Women participation,
-              managed by 20 members SHG.
-            </li>
-            <li>
-              Promotion of Vermi-compost Unit: 29 micro-enterprises promoted
-              with a combined production capacity of 250 MT/year and market
-              linkage established.
-            </li>
-            <li>
-               <b>Spice Processing Unit -under construction:</b> capacity 150kg/hr
-              (drawing front view can be given), proposed products- dehydrated &
-              powdered ginger, turmeric and black pepper.
-            </li>
-          </p>
-        </div>
-        <div
-          className="about-us-image col-12 col-md-6 mt-3"
-          style={{
-            background:
-              "radial-gradient(circle, rgba(93, 255, 61, 0.52) 10%, transparent 60%)",
-          }}
-          data-aos="fade-left"
-        >
-          <img className="responsive-image" src="/about-us-img-6.png" alt="" />
-        </div>
-      </div>
+      </section>
     </div>
   );
 }

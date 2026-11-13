@@ -1,66 +1,86 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-// import PartnerLogos from "./Partnering-logo";
-import bgImage from "../assets/farmer-bg-1.jpeg";
-// Import other images
-import bgImage2 from "../assets/farmer-bg-2.jpeg";
-import bgImage3 from "../assets/farmer-bg-3.jpeg";
-import bgImage4 from "../assets/farmer-bg-4.jpeg";
-import bgImage5 from "../assets/farmer-bg-5.jpeg";
-import bgImage6 from "../assets/farmer-bg-6.jpeg";
-
+import { HERO_SLIDES } from "../data/catalog";
 
 const Hero = () => {
-  const images = [bgImage, bgImage2, bgImage3, bgImage4, bgImage5, bgImage6];
-  const [currentImage, setCurrentImage] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % images.length);
-    }, 5000);
-
+      setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
+    }, 5500);
     return () => clearInterval(timer);
   }, []);
 
-  const nextSlide = () => {
-    setCurrentImage((prev) => (prev + 1) % images.length);
-  };
+  const slide = HERO_SLIDES[currentSlide];
 
-  const prevSlide = () => {
-    setCurrentImage((prev) => (prev - 1 + images.length) % images.length);
-  };
+  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
+  const prevSlide = () =>
+    setCurrentSlide((prev) => (prev - 1 + HERO_SLIDES.length) % HERO_SLIDES.length);
 
   return (
-    <div className="hero-section">
+    <section className="jv-hero" aria-label="Featured Assam Harvests">
       <div
-        className="hero-bg"
-        style={{
-          backgroundImage: `url(${images[currentImage]})`,
-        }}
-      ></div>
+        className="jv-hero__bg"
+        style={{ backgroundImage: `url(${slide.image})` }}
+      />
+      <div className="jv-hero__scrim" />
 
-      <div className="hero-overlay"></div>
-
-      {/* Navigation Arrows */}
-      <button className="slider-arrow left-arrow" onClick={prevSlide}>
-        <i className="bi bi-chevron-left"></i>
-      </button>
-      <button className="slider-arrow right-arrow" onClick={nextSlide}>
-        <i className="bi bi-chevron-right"></i>
-      </button>
-
-      <div className="container-fluid h-100">
-        <div className="row h-100 align-items-center">
-          <div className="col-lg-12 text-center">
-            <div className="hero-content">
-              <h1 className="hero-title text-white mb-4">
-                <span className="gradient-text">"Empowering </span> Rural Lives Through Sustainable <span className="gradient-text">Livelihoods</span>"<br />- An initiative of OIL INDIA Ltd.
-              </h1>
-            </div>
+      <div className="jv-container">
+        <div className="jv-hero__content">
+          <div className="jv-hero__tag">
+            <i className="bi bi-patch-check-fill" />
+            {slide.tag}
+          </div>
+          <h1 className="jv-hero__title">{slide.title}</h1>
+          <p className="jv-hero__subtitle">{slide.subtitle}</p>
+          <div className="d-flex flex-wrap gap-3">
+            <Link to="/product" className="jv-btn jv-btn-gold">
+              Shop Fresh Harvest
+              <i className="bi bi-arrow-right" />
+            </Link>
+            <Link to="/clusters" className="jv-btn jv-btn-ghost-light">
+              Explore 4 Crop Clusters
+            </Link>
           </div>
         </div>
       </div>
-    </div>
+
+      <div className="jv-hero__controls">
+        <div className="jv-container d-flex align-items-center justify-content-between">
+          <div className="jv-hero__dots" role="tablist" aria-label="Hero slides">
+            {HERO_SLIDES.map((_, idx) => (
+              <button
+                key={idx}
+                type="button"
+                className={`jv-hero__dot ${idx === currentSlide ? "is-active" : ""}`}
+                onClick={() => setCurrentSlide(idx)}
+                aria-label={`Go to slide ${idx + 1}`}
+              />
+            ))}
+          </div>
+
+          <div className="d-flex align-items-center gap-2">
+            <button
+              type="button"
+              className="jv-hero__arrow"
+              onClick={prevSlide}
+              aria-label="Previous slide"
+            >
+              <i className="bi bi-chevron-left" />
+            </button>
+            <button
+              type="button"
+              className="jv-hero__arrow"
+              onClick={nextSlide}
+              aria-label="Next slide"
+            >
+              <i className="bi bi-chevron-right" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

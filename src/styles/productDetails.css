@@ -1,124 +1,121 @@
-.product-details {
+.jv-pdp-main-img-wrap {
   position: relative;
-
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  cursor: zoom-in;
 }
 
-.product-details-section{
-  margin-bottom: 110px;
-}
-
-.product-images-bottom {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-.product-images-bottom img:hover{
-  transform: scale(1.2);
-  transition: all 0.5s ease-in-out;
-}
-
-.image-popup {
-  position: fixed;
-  top: 0;
-  left: 0;
+.jv-pdp-main-img {
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.jv-pdp-main-img-wrap:hover .jv-pdp-main-img {
+  transform: scale(1.03);
+}
+
+.jv-pdp-thumbs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-top: 0.85rem;
+}
+
+.jv-pdp-thumb {
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 2px solid transparent;
+  background: var(--bg-surface);
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.jv-pdp-thumb.is-active {
+  border-color: var(--bg-forest);
+  box-shadow: 0 0 0 2px rgba(22, 48, 32, 0.14);
+}
+
+.jv-pdp-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.jv-pdp-variant-btn {
+  padding: 0.55rem 1.05rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
+  background: var(--bg-surface);
+  color: var(--text-ink);
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.jv-pdp-variant-btn.is-active {
+  background: var(--bg-forest);
+  color: #ffffff;
+  border-color: var(--bg-forest);
+}
+
+.jv-pdp-specs {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.jv-pdp-spec-row {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  backdrop-filter: blur(5px);
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.78rem 1.1rem;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 0.88rem;
 }
 
-.popup-content {
-  position: relative;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  width: 50%;
-  height: 50%;
+.jv-pdp-spec-row:last-child {
+  border-bottom: none;
 }
 
-.popup-content img {
-  max-width: 100%;
-  max-height: 90vh;
-  border-radius: 10px;
-}
-
-.close-btn {
-  position: absolute;
-  top: -25px;
-  right: 1px;
-  background: transparent;
-  border: none;
-  font-size: 54px;
-  color: rgb(255, 0, 0);
-  cursor: pointer;
-}
-
-.close-order-btn {
-  position: absolute;
-  top: -16px;
-  right: 10px;
-  background: transparent;
-  border: none;
-  font-size: 50px;
-  font-weight: 10;
-  color: rgb(97, 91, 91);
-  cursor: pointer;
-}
-
-.order-popup {
+.jv-lightbox {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); 
-  backdrop-filter: blur(5px);
+  inset: 0;
+  background: rgba(10, 20, 14, 0.88);
+  backdrop-filter: blur(8px);
+  z-index: 1200;
   display: flex;
-  justify-content: center;
   align-items: center;
-  z-index: 1000;
+  justify-content: center;
+  padding: 2rem;
 }
 
-.order-popup-content {
-  position: relative;
-  background-color: white; 
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: center;
+.jv-lightbox__img {
+  max-width: 92vw;
+  max-height: 85vh;
+  border-radius: var(--radius-md);
+  object-fit: contain;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
 }
 
-/* .text-muted{
-  font-style: italic;
-} */
-
-.order-popup-content h2 {
-  margin: 0 0 10px;
-}
-
-.order-popup-content p {
-  margin: 0 0 20px;
-}
-
-@media (max-width: 768px) {
-    .product-images-bottom{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-        margin-top: 3rem;
-    }
-
-    .product-images-heading{
-      margin-top: 130px;
-    }
-
-    .product-details-section{
-      margin-top: 150px;
-    }
+.jv-lightbox__close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  font-size: 1.25rem;
+  cursor: pointer;
 }

@@ -1,219 +1,202 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { useState, useMemo, useEffect } from "react";
+import { Link, useSearchParams } from "react-router-dom";
+import { PRODUCTS, CATEGORIES } from "../data/catalog";
+import ProductCard from "./ProductCard";
+import SmartImage from "./SmartImage";
 import "../styles/products.css";
 
-const products = [
-  {
-    id: 1,
-    name: "Ginger",
-    img: "/ginger_img.JPG",
-    productImages: [
-      "/ginger-product-img-1.JPG",
-      "/ginger-product-img-2.JPG",
-      "/ginger-product-img-3.JPG",
-    ],
-    productImg: "/ginger-product.png",
-    scientificName: "Zingiber officinale",
-    bgColor: "radial-gradient(circle, rgb(255, 238, 0) 10%, transparent 70%)",
-    description:
-      "Consumption of ginger helps in digestion, boost metabolism, weight loss, Relief of Nausea, Dental health, Stomach ulcer.",
-  },
-  {
-    id: 2,
-    name: "Turmeric",
-    img: "https://www.webappfactory.co/jeevika/assets/images/products/prd_turmeric.webp",
-    productImages: [
-      "/turmeric-product-img-1.JPG",
-      "/turmeric-product-img-2.JPG",
-      "/turmeric-product-img-3.JPG",
-    ],
-    productImg: "/turmeric-product.png",
-    scientificName: "Curcuma longa",
-    bgColor: "radial-gradient(circle, rgb(187, 255, 0) 10%, transparent 70%)",
-    description:
-      "Turmeric contains antioxidants helps in rejuvenate memory cells, improve heart health and curbs cancer causing  cells.",
-  },
-  {
-    id: 3,
-    name: "Black Pepper",
-    img: "	https://www.webappfactory.co/jeevika/assets/images/products/prd_blackpaper.webp",
-    productImages: [
-      "/black-pepper-product-img-1.JPG",
-      "/black-pepper-product-img-2.JPG",
-      "/black-pepper-product-img-3.JPG",
-    ],
-    productImg: "/black-pepper-cluster-1.png",
-    scientificName: "Piper nigrum",
-    bgColor: "radial-gradient(circle, rgb(255,193,140) 10%, transparent 70%)",
-    description:
-      "“King of Spices” rich in antioxidents. Black pepper continues to be a staple in kitchens worldwide, adding spice.",
-  },
-  {
-    id: 4,
-    name: "Mandarin",
-    img: "https://horticult.wordpress.com/wp-content/uploads/2016/07/me1bb99t_cc3a0nh_que1baa5t.jpg?w=1200",
-    productImages: [
-      "/khasi_mandarine.jpeg",
-      "/khasi_mandarine_1.jpeg",
-      "/khasi_mandarine_3.jpeg",
-    ],
-    productImg: "/khasi-mandarin.png",
-    scientificName: "Citrus reticulata",
-    bgColor: "radial-gradient(circle, rgb(255, 134, 47) 10%, transparent 70%)",
-    description:
-      "Rich in Vitamin C, Hign in antioxidents, improve immune system, Boost gut health and may reduce  kidney stone.",
-  },
-
-  {
-    id: 5,
-    name: "Bhoot Jolokiya (King Chilli)",
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Bhut-Jolokia-pc.jpg/1200px-Bhut-Jolokia-pc.jpg",
-    productImages: [
-      "https://cdn.shopify.com/s/files/1/0581/8230/3937/files/Bhut_Jolokia_-_Scoville_Scale_and_Heat_Levels.webp?v=1706513996",
-      "https://5.imimg.com/data5/KP/WB/MY-74392315/assam-bhut-jolokia.jpg",
-      "https://www.webappfactory.co/jeevika/assets/images/products/prd_nagachilli.webp",
-    ],
-    productImg: "/king-chilli.png",
-    scientificName: "Capsicum chinense",
-    bgColor:
-      "radial-gradient(circle, rgba(255, 32, 32, 0.71) 10%, transparent 70%)",
-    description:
-      "Hold a place among the hottest chilli in the world. It helps in boost metabolism, pain relief and have antioxidant.",
-  },
-
-  {
-    id: 6,
-    name: "Assam lemon",
-    img: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRv9tPamPXOLXCmZ0tGdSlV2azU9GYbZz2weqmZxNjJL650ojbX8CVMRrjyQMKy_3EAKZU2_Z1fbZiXpy96Ctd18w",
-    productImages: [
-      "https://5.imimg.com/data5/ANDROID/Default/2021/5/YF/EB/BI/95501584/screenshot-20210518-115406-google-jpg-500x500.jpg",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuEFOR8WH5Oed_PDqpdbRuZ1W2p_1rp_oiiA&s",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGbEi3Df3Hcwlpd6KbH3qV25-W7ZfUsnE2Fg&s",
-    ],
-    productImg: "/assam-lemon.png",
-    scientificName: "Citrus limon",
-    bgColor:
-      "radial-gradient(circle, rgba(39, 255, 50, 0.84) 10%, transparent 70%)",
-    description:
-      "“State fruit of Assam” known for its unique flavour and aroma. Rich in Vitamin C, antioxidents and improves immunity.",
-  },
-
-  {
-    id: 7,
-    name: "Tea",
-    img: "/tea_2.jpeg",
-    productImages: [
-      "/tea_image.JPG",
-      "/tea_1.jpeg",
-      "https://www.webappfactory.co/jeevika/assets/images/service/tea2.webp",
-    ],
-    productImg: "/tea.png",
-    scientificName: "Camellia sinensis",
-    bgColor: "radial-gradient(circle, rgb(111, 255, 118) 10%, transparent 70%)",
-    description:
-      "Contains caffeine that boost brain cells, aids in weight loss, maintain blood sugar, have potential to fight against cancer.",
-  },
-
-  {
-    id: 8,
-    name: "Agarbatti Rolling sticks",
-    img: "https://www.webappfactory.co/jeevika/assets/images/products/prd_agarbati.webp",
-    productImages: [
-      "https://www.webappfactory.co/jeevika/assets/images/products/prd_agarbati.webp",
-      "https://www.webappfactory.co/jeevika/assets/images/products/prd_agarbati.webp",
-      "https://www.webappfactory.co/jeevika/assets/images/products/prd_agarbati.webp",
-    ],
-    productImg: "https://www.webappfactory.co/jeevika/assets/images/products/prd_agarbati.webp",
-    scientificName: "Value Addition",
-    bgColor:
-      "radial-gradient(circle, rgba(255, 155, 73, 0.65) 10%, transparent 70%)",
-    description:
-      "Non scented agarbati made by  women from the villages of Daisa and Bor rupai.",
-  },
-
-  {
-    id: 9,
-    name: "Vermicompost",
-    img: "https://www.webappfactory.co/jeevika/assets/images/products/prd_vermicompost.webp",
-    productImages: [
-      "/vermin-compost.jpeg",
-      "https://cdn.shopify.com/s/files/1/0047/9730/0847/files/compost-with-redworm_480x480.jpg?v=1624826892",
-      "https://www.gandhisgardentokitchen.com/product-images/pVJwwlzjOQ.jpg/1481995000000253073/600x600",
-    ],
-    productImg: "/vermicompost.png",
-    scientificName: "Value Addition",
-    bgColor:
-      "radial-gradient(circle, rgba(133, 60, 0, 0.52) 10%, transparent 70%)",
-    description:
-      "Enrich compost with the use of earthworms and recycle agriculture waste, enhances soil properties.",
-  },
-
-  {
-    id: 10,
-    name: "Bamboo",
-    img: "/bamboo-1.jpeg",
-    productImages: [
-      "/bamboo-2.jpeg",
-      "/bamboo-1.jpeg",
-      "/bamboo-3.jpeg",
-    ],
-    productImg: "/bamboo.jpeg",
-    icon: "https://www.webappfactory.co/jeevika/assets/images/icon/bamboo.svg",
-    scientificName: "Bambusoideae",
-    bgColor:
-      "radial-gradient(circle, rgba(30, 180, 0, 0.52) 10%, transparent 70%)",
-    description:
-      "It absorbs greenhouse gases and releases oxygen. 1 ha of bamboo can absorb 17 tonnes of carbon per year.",
-  },
-];
-
 const Products = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const initialQuery = searchParams.get("q") || "";
+  const initialCat = searchParams.get("category") || "All";
+
+  const [searchQuery, setSearchQuery] = useState(initialQuery);
+  const [selectedCategory, setSelectedCategory] = useState(
+    CATEGORIES.includes(initialCat) ? initialCat : "All"
+  );
+  const [sortBy, setSortBy] = useState("featured");
+
   useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
+    setSearchQuery(searchParams.get("q") || "");
+    const cat = searchParams.get("category");
+    if (cat && CATEGORIES.includes(cat)) {
+      setSelectedCategory(cat);
+    }
+  }, [searchParams]);
+
+  const handleCategoryChange = (cat) => {
+    setSelectedCategory(cat);
+    const next = new URLSearchParams(searchParams);
+    if (cat === "All") next.delete("category");
+    else next.set("category", cat);
+    setSearchParams(next, { replace: true });
+  };
+
+  const filteredProducts = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    let list = PRODUCTS.filter((p) => {
+      const matchCategory = selectedCategory === "All" || p.category === selectedCategory;
+      const matchSearch =
+        !q ||
+        p.name.toLowerCase().includes(q) ||
+        p.scientificName.toLowerCase().includes(q) ||
+        p.category.toLowerCase().includes(q) ||
+        p.origin.toLowerCase().includes(q) ||
+        p.shortDescription.toLowerCase().includes(q);
+      return matchCategory && matchSearch;
+    });
+
+    if (sortBy === "name-asc") {
+      list = [...list].sort((a, b) => a.name.localeCompare(b.name));
+    } else if (sortBy === "name-desc") {
+      list = [...list].sort((a, b) => b.name.localeCompare(a.name));
+    }
+
+    return list;
+  }, [searchQuery, selectedCategory, sortBy]);
 
   return (
     <div id="products">
-      <div className="products-section">
-        <div className="product-bg">
-          <img
-            src="https://www.webappfactory.co/jeevika/assets/images/products/product_bnr_img.webp"
-            alt="products"
-          />
+      {/* Page Header Banner */}
+      <section className="jv-page-banner">
+        <SmartImage
+          src="/cluster_hero_img.webp"
+          alt="Jeevika Assam Harvest Marketplace"
+          className="jv-page-banner__bg"
+        />
+        <div className="jv-page-banner__scrim" />
+        <div className="jv-container jv-page-banner__content">
+          <span
+            className="jv-eyebrow"
+            style={{ background: "rgba(255,255,255,0.14)", color: "#f8d48b" }}
+          >
+            Farm-to-Buyer Catalog
+          </span>
+          <h1 className="jv-page-banner__title">Jeevika Marketplace</h1>
+          <p className="jv-page-banner__desc">
+            Single-origin Assam spices, tea, citrus, bamboo crafts, and bio-inputs harvested by our 900+ partner farmers.
+          </p>
         </div>
-        <div className="product-overlay"></div>
-        <div className="product-content">
-          <h1 className="product-title">Products</h1>
-        </div>
-      </div>
-      <br />
-      <br />
-      <div className="product-grid mt-8">
-        {products.map((product) => (
-          <div key={product.id} className="product-card" data-aos="fade-up">
-            <img
-              src={product.img}
-              alt={product.name}
-              className="product-image"
-            />
-            <div className="product-content">
-              <div className="d-flex justify-content-center align-items-center mb-1">
-                <h2 className="product-name mb-0">{product.name}</h2>
+      </section>
+
+      <section className="jv-section">
+        <div className="jv-container">
+          {/* Filter & Search Bar */}
+          <div className="jv-shop-toolbar">
+            <div className="d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center justify-content-between gap-3">
+              <div className="jv-filter-pills">
+                {CATEGORIES.map((category) => (
+                  <button
+                    key={category}
+                    type="button"
+                    className={`jv-filter-pill ${selectedCategory === category ? "is-active" : ""}`}
+                    onClick={() => handleCategoryChange(category)}
+                  >
+                    {category}
+                  </button>
+                ))}
               </div>
-              <i className="text-muted">{product.scientificName}</i>
-              <p className="product-description">{product.description}</p>
-              <div className="">
-                <Link to={`/product-details/${product.id}`} state={{ product }}>
-                  <button className="order-btn">Order now</button>
-                </Link>
+
+              <div className="d-flex flex-column flex-sm-row align-items-stretch align-items-sm-center gap-2">
+                <div className="jv-shop-search">
+                  <i className="bi bi-search" />
+                  <input
+                    type="search"
+                    placeholder="Filter by crop or origin..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    aria-label="Filter catalog products"
+                  />
+                </div>
+                <select
+                  className="jv-sort-select"
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value)}
+                  aria-label="Sort products"
+                >
+                  <option value="featured">Sort: Featured</option>
+                  <option value="name-asc">Name: A to Z</option>
+                  <option value="name-desc">Name: Z to A</option>
+                </select>
               </div>
             </div>
           </div>
-        ))}
-      </div>
+
+          <div className="d-flex justify-content-between align-items-center mb-3">
+            <p className="small text-muted mb-0">
+              Showing <strong>{filteredProducts.length}</strong> of {PRODUCTS.length} products
+              {selectedCategory !== "All" ? ` in ${selectedCategory}` : ""}
+            </p>
+            {(searchQuery || selectedCategory !== "All") && (
+              <button
+                type="button"
+                className="btn btn-link btn-sm text-success fw-semibold p-0"
+                onClick={() => {
+                  setSearchQuery("");
+                  handleCategoryChange("All");
+                }}
+              >
+                Reset filters
+              </button>
+            )}
+          </div>
+
+          {filteredProducts.length === 0 ? (
+            <div
+              className="text-center py-5 px-3 rounded-4"
+              style={{ background: "var(--bg-surface)", border: "1px solid var(--border-subtle)" }}
+            >
+              <i className="bi bi-search fs-1 text-muted d-block mb-3" />
+              <h2 className="h4 mb-2">No matching products found</h2>
+              <p className="text-muted mb-4">
+                Try clearing your search or switching to another crop category.
+              </p>
+              <button
+                type="button"
+                className="jv-btn jv-btn-primary"
+                onClick={() => {
+                  setSearchQuery("");
+                  handleCategoryChange("All");
+                }}
+              >
+                Show All Products
+              </button>
+            </div>
+          ) : (
+            <div className="row g-4">
+              {filteredProducts.map((product) => (
+                <div key={product.id} className="col-12 col-md-6 col-lg-4">
+                  <ProductCard product={product} />
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* Wholesale / B2B Callout */}
+          <div className="jv-wholesale-cta d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-4">
+            <div>
+              <span
+                className="jv-eyebrow"
+                style={{ background: "rgba(255,255,255,0.14)", color: "#f8d48b" }}
+              >
+                B2B &amp; Institutional Procurement
+              </span>
+              <h2 className="font-display text-white h3 mb-2">
+                Looking for Bulk Spices, Tea Lots, or SHG Bamboo Supplies?
+              </h2>
+              <p className="mb-0" style={{ color: "rgba(255,255,255,0.8)", maxWidth: 640 }}>
+                Connect directly with our Guwahati coordination office for commercial lots, custom dehydration/powdering via our Spice Processing Unit, or corporate gifting hampers.
+              </p>
+            </div>
+            <Link to="/contact" className="jv-btn jv-btn-gold flex-shrink-0">
+              Request Wholesale Quote
+              <i className="bi bi-arrow-right" />
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
+
 export default Products;

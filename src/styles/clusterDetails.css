@@ -1,6 +1,45 @@
-@media (max-width: 768px){
-    .about-us{
-        display: flex;
-        flex-direction: column-reverse;
-    }
+.jv-cluster-block {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  box-shadow: var(--shadow-xs);
+  margin-bottom: 2.5rem;
+}
+
+.jv-cluster-media-frame {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--bg-cream-alt);
+  border: 1px solid var(--border-subtle);
+  aspect-ratio: 4 / 3;
+}
+
+.jv-cluster-media-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.jv-check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.jv-check-list li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.65rem;
+  color: var(--text-body);
+  line-height: 1.6;
+}
+
+.jv-check-list li::before {
+  content: "\F26A";
+  font-family: "bootstrap-icons";
+  position: absolute;
+  left: 0;
+  top: 0.15rem;
+  color: var(--accent-leaf);
 }

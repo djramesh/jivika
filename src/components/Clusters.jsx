@@ -1,73 +1,79 @@
-import React, { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import '../styles/clusters.css';
-import { Link } from 'react-router-dom';
-
-const clusters = [
-  {
-    name: 'Tea',
-    img: 'https://www.webappfactory.co/jeevika/assets/images/service/tea2.webp',
-    icon: 'https://www.webappfactory.co/jeevika/assets/images/icon/tea_leaf.svg',
-    hoverImg: '/tea-leaf.png',
-    description: 'Scientific practices adopted in tea cultivation from soil testing to Post harvest handling covering 100 ha of 250 small tea growers.',
-  },
-  {
-    name: 'Citrus',
-    img: '/citrus-img.webp',
-    icon: 'https://www.webappfactory.co/jeevika/assets/images/icon/citrus.svg',
-    hoverImg: '/citrus.png',
-    description: 'Under Citrus we are having Assam lemon covering 10 ha and Khasi mandarin Covering 25 ha of land and Scientific package of practices are being adopted.',
-  },
-  {
-    name: 'Spice',
-    img: 'https://static.toiimg.com/photo/107018765.cms',
-    icon: 'https://www.webappfactory.co/jeevika/assets/images/icon/spices.svg',
-    hoverImg: '/spices.png',
-    description: 'High valued spice crop like Black pepper, Ginger, Turmeric, Naga king Chilli are being cultivated using Scientific practices to improve quality and quantity.',
-  },
-  {
-    name: 'Bamboo',
-    img: '/bamboo-2.jpeg',
-    icon: 'https://www.webappfactory.co/jeevika/assets/images/icon/bamboo.svg',
-    hoverImg: '/bamboo.png',
-    description: 'Introduced Bambusa tulda and Bambusa Balcooa in 30 ha of land as its absorbed 35% more green house gases and can store harmful Co2 in its root system.',
-  },
-];
+import { Link } from "react-router-dom";
+import { CLUSTERS } from "../data/catalog";
+import SmartImage from "./SmartImage";
+import "../styles/clusters.css";
 
 const Clusters = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
-
   return (
-    <div className='container mt-5'>
-      <div className="text-center">
-        <h1 className="position-relative d-inline-block display-1">
-          <img src="/tea-leaf.png" alt="Tea Leaf" className="position-absolute float-image" style={{ width: '62px', height: '52px', top: '-10px', left: '-40px' }} />
-          <span className='clusters-heading'>Clusters</span>
-          <img src="/spices-img.png" alt="Spices" className="position-absolute float-image" style={{ width: '82px', height: '82px', top: '-40px', right: '-40px' }} />
-          <img src="/citrus.png" alt="Citrus" className="position-absolute float-image" style={{ width: '82px', height: '82px', top: '60px', left: '-40px' }} />
-          <img src="/bamboo.png" alt="Bamboo" className="position-absolute float-image" style={{ width: '82px', height: '82px', top: '60px', right: '-30px' }} />
-        </h1>
-        <br /><br /><br />
-        <p className='mt-3'>The project adopts an integrated cluster-based approach to foster self-employment and sustainable income generation, with a strong emphasis on creating linkages across the agricultural value chain. It strategically targets key objectives such as introducing high-value crops, promoting bamboo cultivation, value addition and transitioning towards demand-driven production systems.</p>
-      </div>
-      <br /><br />
-      <div className="clusters-grid mt-8">
-        {clusters.map((cluster, index) => (
-          <Link to={`/cluster/${cluster.name.toLowerCase()}`} key={index} className="cluster-card" style={{ '--hover-img': `url(${cluster.hoverImg})` }} data-aos="fade-up">
-            <img src={cluster.img} alt={cluster.name} className="cluster-image" />
-            <div className="cluster-content">
-              <div className="d-flex justify-content-center align-items-center mb-1">
-                <h2 className="cluster-name mb-0">{cluster.name}</h2>
-                <img src={cluster.icon} alt={cluster.name} className="cluster-image ms-2" />
+    <div>
+      <section className="jv-page-banner">
+        <SmartImage
+          src="/cluster_hero_img.webp"
+          alt="Jeevika Agricultural Clusters"
+          className="jv-page-banner__bg"
+        />
+        <div className="jv-page-banner__scrim" />
+        <div className="jv-container jv-page-banner__content">
+          <span
+            className="jv-eyebrow"
+            style={{ background: "rgba(255,255,255,0.14)", color: "#f8d48b" }}
+          >
+            Integrated Value Chains
+          </span>
+          <h1 className="jv-page-banner__title">Our Four Crop Clusters</h1>
+          <p className="jv-page-banner__desc">
+            Fostering sustainable rural self-employment across Tea, Citrus, Spices, and Bamboo in Tinsukia, Assam.
+          </p>
+        </div>
+      </section>
+
+      <section className="jv-section">
+        <div className="jv-container">
+          <div className="text-center mx-auto mb-5" style={{ maxWidth: 740 }}>
+            <span className="jv-eyebrow">Cluster-Based Development</span>
+            <h2 className="jv-section-title">From Farm Productivity to Direct Market Access</h2>
+            <p className="text-muted lh-lg mb-0">
+              Project Jeevika adopts an integrated cluster-based approach to foster sustainable income generation—introducing high-value crops, revitalizing traditional orchards, enabling local value addition, and transitioning toward demand-driven production systems.
+            </p>
+          </div>
+
+          <div className="row g-4">
+            {CLUSTERS.map((cluster) => (
+              <div key={cluster.id} className="col-12 col-md-6">
+                <div className="jv-cluster-showcase-card">
+                  <div className="jv-cluster-showcase-card__media">
+                    <SmartImage src={cluster.img} alt={cluster.name} />
+                    <span className="jv-cluster-showcase-card__badge">{cluster.impactStat}</span>
+                  </div>
+                  <div className="p-4 d-flex flex-column flex-grow-1">
+                    <div className="d-flex align-items-center justify-content-between mb-2">
+                      <h3 className="h4 mb-0">{cluster.name}</h3>
+                      <img
+                        src={cluster.iconImg}
+                        alt=""
+                        style={{ width: 28, height: 28, objectFit: "contain" }}
+                      />
+                    </div>
+                    <div className="small fw-semibold text-success mb-2">{cluster.coverage}</div>
+                    <p className="text-muted mb-4 flex-grow-1" style={{ lineHeight: 1.65 }}>
+                      {cluster.description}
+                    </p>
+                    <div className="d-flex flex-wrap gap-2">
+                      <Link to={`/cluster/${cluster.id}`} className="jv-btn jv-btn-primary">
+                        View Cluster Report
+                        <i className="bi bi-arrow-right" />
+                      </Link>
+                      <Link to="/product" className="jv-btn jv-btn-outline">
+                        Shop Harvests
+                      </Link>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <p className="cluster-description">{cluster.description}</p>
-            </div>
-          </Link>
-        ))}
-      </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
